@@ -1,0 +1,14 @@
+C:\Users\User\Documents\GitHub\Unity_lesson_1\unitiyLesson. Csharp.Basic\UnityLesson_CSharp_IF\obj\Debug\netcoreapp3.1\UnityLesson_CSharp_IF.csproj.AssemblyReference.cache
+C:\Users\User\Documents\GitHub\Unity_lesson_1\unitiyLesson. Csharp.Basic\UnityLesson_CSharp_IF\obj\Debug\netcoreapp3.1\UnityLesson_CSharp_IF.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Documents\GitHub\Unity_lesson_1\unitiyLesson. Csharp.Basic\UnityLesson_CSharp_IF\obj\Debug\netcoreapp3.1\UnityLesson_CSharp_IF.AssemblyInfoInputs.cache
+C:\Users\User\Documents\GitHub\Unity_lesson_1\unitiyLesson. Csharp.Basic\UnityLesson_CSharp_IF\obj\Debug\netcoreapp3.1\UnityLesson_CSharp_IF.AssemblyInfo.cs
+C:\Users\User\Documents\GitHub\Unity_lesson_1\unitiyLesson. Csharp.Basic\UnityLesson_CSharp_IF\obj\Debug\netcoreapp3.1\UnityLesson_CSharp_IF.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\GitHub\Unity_lesson_1\unitiyLesson. Csharp.Basic\UnityLesson_CSharp_IF\bin\Debug\netcoreapp3.1\UnityLesson_CSharp_IF.exe
+C:\Users\User\Documents\GitHub\Unity_lesson_1\unitiyLesson. Csharp.Basic\UnityLesson_CSharp_IF\bin\Debug\netcoreapp3.1\UnityLesson_CSharp_IF.deps.json
+C:\Users\User\Documents\GitHub\Unity_lesson_1\unitiyLesson. Csharp.Basic\UnityLesson_CSharp_IF\bin\Debug\netcoreapp3.1\UnityLesson_CSharp_IF.runtimeconfig.json
+C:\Users\User\Documents\GitHub\Unity_lesson_1\unitiyLesson. Csharp.Basic\UnityLesson_CSharp_IF\bin\Debug\netcoreapp3.1\UnityLesson_CSharp_IF.runtimeconfig.dev.json
+C:\Users\User\Documents\GitHub\Unity_lesson_1\unitiyLesson. Csharp.Basic\UnityLesson_CSharp_IF\bin\Debug\netcoreapp3.1\UnityLesson_CSharp_IF.dll
+C:\Users\User\Documents\GitHub\Unity_lesson_1\unitiyLesson. Csharp.Basic\UnityLesson_CSharp_IF\bin\Debug\netcoreapp3.1\UnityLesson_CSharp_IF.pdb
+C:\Users\User\Documents\GitHub\Unity_lesson_1\unitiyLesson. Csharp.Basic\UnityLesson_CSharp_IF\obj\Debug\netcoreapp3.1\UnityLesson_CSharp_IF.dll
+C:\Users\User\Documents\GitHub\Unity_lesson_1\unitiyLesson. Csharp.Basic\UnityLesson_CSharp_IF\obj\Debug\netcoreapp3.1\UnityLesson_CSharp_IF.pdb
+C:\Users\User\Documents\GitHub\Unity_lesson_1\unitiyLesson. Csharp.Basic\UnityLesson_CSharp_IF\obj\Debug\netcoreapp3.1\UnityLesson_CSharp_IF.genruntimeconfig.cache
