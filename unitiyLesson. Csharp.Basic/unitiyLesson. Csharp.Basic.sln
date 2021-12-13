@@ -3,13 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "unitiyLesson. Csharp.program", "unitiyLesson. Csharp.program\unitiyLesson. Csharp.program.csproj", "{3F2C1B8F-484B-41CD-BA46-523E6ED494B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "unitiyLesson. Csharp.program", "unitiyLesson. Csharp.program\unitiyLesson. Csharp.program.csproj", "{3F2C1B8F-484B-41CD-BA46-523E6ED494B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityLesson_CSharp_IF", "UnityLesson_CSharp_IF\UnityLesson_CSharp_IF.csproj", "{F4C12AFA-B346-4457-8B4A-D57FCE594862}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnityLesson_CSharp_IF", "UnityLesson_CSharp_IF\UnityLesson_CSharp_IF.csproj", "{F4C12AFA-B346-4457-8B4A-D57FCE594862}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityLesson_CSharp_variables", "UnityLesson_CSharp_variables\UnityLesson_CSharp_variables.csproj", "{715CCB55-DB03-4A55-B11F-28D3E7CB1A88}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnityLesson_CSharp_variables", "UnityLesson_CSharp_variables\UnityLesson_CSharp_variables.csproj", "{715CCB55-DB03-4A55-B11F-28D3E7CB1A88}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityLesson_CSharp_Function", "UnityLesson_CSharp_Function\UnityLesson_CSharp_Function.csproj", "{6E3585A4-9725-404D-89B1-49FBF2E96BB4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnityLesson_CSharp_Function", "UnityLesson_CSharp_Function\UnityLesson_CSharp_Function.csproj", "{6E3585A4-9725-404D-89B1-49FBF2E96BB4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "unityLesson_CSharp_variablesandFunction", "unityLesson_CSharp_variablesandFunction\unityLesson_CSharp_variablesandFunction.csproj", "{714BB273-9895-4D4A-B892-96188186D3EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityLesson_CSharp_Class_Object_instance", "UnityLesson_CSharp_Class_Object_instance\UnityLesson_CSharp_Class_Object_instance.csproj", "{5EBDFE88-8EAD-4ADC-979C-C924BC435D80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityLesson_CSharp_Variable_Function_Instance", "UnityLesson_CSharp_Variable_Function_Instance\UnityLesson_CSharp_Variable_Function_Instance.csproj", "{669EB230-0BA6-41DD-BA04-A31B2408C5B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityLesson_Csharp_StaticExample", "UnityLesson_Csharp_StaticExample\UnityLesson_Csharp_StaticExample.csproj", "{557FA93A-5A49-4E7B-888B-12CAAD770509}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +41,22 @@ Global
 		{6E3585A4-9725-404D-89B1-49FBF2E96BB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E3585A4-9725-404D-89B1-49FBF2E96BB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E3585A4-9725-404D-89B1-49FBF2E96BB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{714BB273-9895-4D4A-B892-96188186D3EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{714BB273-9895-4D4A-B892-96188186D3EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{714BB273-9895-4D4A-B892-96188186D3EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{714BB273-9895-4D4A-B892-96188186D3EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EBDFE88-8EAD-4ADC-979C-C924BC435D80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EBDFE88-8EAD-4ADC-979C-C924BC435D80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EBDFE88-8EAD-4ADC-979C-C924BC435D80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EBDFE88-8EAD-4ADC-979C-C924BC435D80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{669EB230-0BA6-41DD-BA04-A31B2408C5B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{669EB230-0BA6-41DD-BA04-A31B2408C5B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{669EB230-0BA6-41DD-BA04-A31B2408C5B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{669EB230-0BA6-41DD-BA04-A31B2408C5B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{557FA93A-5A49-4E7B-888B-12CAAD770509}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{557FA93A-5A49-4E7B-888B-12CAAD770509}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{557FA93A-5A49-4E7B-888B-12CAAD770509}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{557FA93A-5A49-4E7B-888B-12CAAD770509}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

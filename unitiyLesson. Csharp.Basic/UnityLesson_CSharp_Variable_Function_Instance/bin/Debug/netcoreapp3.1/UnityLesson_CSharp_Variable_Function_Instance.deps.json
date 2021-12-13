@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "UnityLesson_CSharp_Variable_Function_Instance/1.0.0": {
+        "runtime": {
+          "UnityLesson_CSharp_Variable_Function_Instance.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "UnityLesson_CSharp_Variable_Function_Instance/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

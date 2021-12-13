@@ -58,7 +58,7 @@ namespace unitiyLesson._Csharp.program
         //함수의 입력은 함수 이름 뒤에 괄호열고 "자료형", "이름" 괄호닫고 형태.
         //이 함수의 입력 인자를 argument라고 함.
         
-        static void Main(string[] args)
+        static void Main(string[] args) 
         {
 
             //Console?
