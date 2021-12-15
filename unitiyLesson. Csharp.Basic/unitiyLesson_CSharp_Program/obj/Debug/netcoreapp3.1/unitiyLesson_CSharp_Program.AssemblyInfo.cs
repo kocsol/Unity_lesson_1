@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("UnityLesson_CSharp_Variables")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("unitiyLesson_CSharp_Program")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("UnityLesson_CSharp_Variables")]
-[assembly: System.Reflection.AssemblyTitleAttribute("UnityLesson_CSharp_Variables")]
+[assembly: System.Reflection.AssemblyProductAttribute("unitiyLesson_CSharp_Program")]
+[assembly: System.Reflection.AssemblyTitleAttribute("unitiyLesson_CSharp_Program")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // MSBuild WriteCodeFragment 클래스에서 생성되었습니다.

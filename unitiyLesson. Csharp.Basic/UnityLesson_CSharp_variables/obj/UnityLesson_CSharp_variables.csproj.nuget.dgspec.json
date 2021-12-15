@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Documents\\GitHub\\Unity_lesson_1\\unitiyLesson. Csharp.Basic\\UnityLesson_CSharp_variables\\UnityLesson_CSharp_variables.csproj": {}
+    "C:\\Users\\User\\Documents\\GitHub\\Unity_lesson_1\\unitiyLesson. Csharp.Basic\\UnityLesson_CSharp_variables\\UnityLesson_CSharp_Variables.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Documents\\GitHub\\Unity_lesson_1\\unitiyLesson. Csharp.Basic\\UnityLesson_CSharp_variables\\UnityLesson_CSharp_variables.csproj": {
+    "C:\\Users\\User\\Documents\\GitHub\\Unity_lesson_1\\unitiyLesson. Csharp.Basic\\UnityLesson_CSharp_variables\\UnityLesson_CSharp_Variables.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Documents\\GitHub\\Unity_lesson_1\\unitiyLesson. Csharp.Basic\\UnityLesson_CSharp_variables\\UnityLesson_CSharp_variables.csproj",
-        "projectName": "UnityLesson_CSharp_variables",
-        "projectPath": "C:\\Users\\User\\Documents\\GitHub\\Unity_lesson_1\\unitiyLesson. Csharp.Basic\\UnityLesson_CSharp_variables\\UnityLesson_CSharp_variables.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Documents\\GitHub\\Unity_lesson_1\\unitiyLesson. Csharp.Basic\\UnityLesson_CSharp_variables\\UnityLesson_CSharp_Variables.csproj",
+        "projectName": "UnityLesson_CSharp_Variables",
+        "projectPath": "C:\\Users\\User\\Documents\\GitHub\\Unity_lesson_1\\unitiyLesson. Csharp.Basic\\UnityLesson_CSharp_variables\\UnityLesson_CSharp_Variables.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\User\\Documents\\GitHub\\Unity_lesson_1\\unitiyLesson. Csharp.Basic\\UnityLesson_CSharp_variables\\obj\\",
         "projectStyle": "PackageReference",

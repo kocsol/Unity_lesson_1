@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Documents\\GitHub\\Unity_lesson_1\\unitiyLesson. Csharp.Basic\\unitiyLesson_CSharp_Program\\unitiyLesson. Csharp.program.csproj": {}
+    "C:\\Users\\User\\Documents\\GitHub\\Unity_lesson_1\\unitiyLesson. Csharp.Basic\\unitiyLesson_CSharp_Program\\unitiyLesson_CSharp_Program.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Documents\\GitHub\\Unity_lesson_1\\unitiyLesson. Csharp.Basic\\unitiyLesson_CSharp_Program\\unitiyLesson. Csharp.program.csproj": {
+    "C:\\Users\\User\\Documents\\GitHub\\Unity_lesson_1\\unitiyLesson. Csharp.Basic\\unitiyLesson_CSharp_Program\\unitiyLesson_CSharp_Program.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Documents\\GitHub\\Unity_lesson_1\\unitiyLesson. Csharp.Basic\\unitiyLesson_CSharp_Program\\unitiyLesson. Csharp.program.csproj",
-        "projectName": "unitiyLesson. Csharp.program",
-        "projectPath": "C:\\Users\\User\\Documents\\GitHub\\Unity_lesson_1\\unitiyLesson. Csharp.Basic\\unitiyLesson_CSharp_Program\\unitiyLesson. Csharp.program.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Documents\\GitHub\\Unity_lesson_1\\unitiyLesson. Csharp.Basic\\unitiyLesson_CSharp_Program\\unitiyLesson_CSharp_Program.csproj",
+        "projectName": "unitiyLesson_CSharp_Program",
+        "projectPath": "C:\\Users\\User\\Documents\\GitHub\\Unity_lesson_1\\unitiyLesson. Csharp.Basic\\unitiyLesson_CSharp_Program\\unitiyLesson_CSharp_Program.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\User\\Documents\\GitHub\\Unity_lesson_1\\unitiyLesson. Csharp.Basic\\unitiyLesson_CSharp_Program\\obj\\",
         "projectStyle": "PackageReference",

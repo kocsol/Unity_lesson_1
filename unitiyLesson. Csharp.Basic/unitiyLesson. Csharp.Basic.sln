@@ -3,21 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "unitiyLesson. Csharp.program", "unitiyLesson. Csharp.program\unitiyLesson. Csharp.program.csproj", "{3F2C1B8F-484B-41CD-BA46-523E6ED494B4}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnityLesson_CSharp_IF", "UnityLesson_CSharp_IF\UnityLesson_CSharp_IF.csproj", "{F4C12AFA-B346-4457-8B4A-D57FCE594862}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnityLesson_CSharp_variables", "UnityLesson_CSharp_variables\UnityLesson_CSharp_variables.csproj", "{715CCB55-DB03-4A55-B11F-28D3E7CB1A88}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnityLesson_CSharp_Variables", "UnityLesson_CSharp_variables\UnityLesson_CSharp_Variables.csproj", "{715CCB55-DB03-4A55-B11F-28D3E7CB1A88}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnityLesson_CSharp_Function", "UnityLesson_CSharp_Function\UnityLesson_CSharp_Function.csproj", "{6E3585A4-9725-404D-89B1-49FBF2E96BB4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "unityLesson_CSharp_variablesandFunction", "unityLesson_CSharp_variablesandFunction\unityLesson_CSharp_variablesandFunction.csproj", "{714BB273-9895-4D4A-B892-96188186D3EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnityLesson_CSharp_Class_Object_instance", "UnityLesson_CSharp_Class_Object_instance\UnityLesson_CSharp_Class_Object_instance.csproj", "{5EBDFE88-8EAD-4ADC-979C-C924BC435D80}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityLesson_CSharp_Class_Object_instance", "UnityLesson_CSharp_Class_Object_instance\UnityLesson_CSharp_Class_Object_instance.csproj", "{5EBDFE88-8EAD-4ADC-979C-C924BC435D80}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnityLesson_CSharp_Variable_Function_Instance", "UnityLesson_CSharp_Variable_Function_Instance\UnityLesson_CSharp_Variable_Function_Instance.csproj", "{669EB230-0BA6-41DD-BA04-A31B2408C5B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityLesson_CSharp_Variable_Function_Instance", "UnityLesson_CSharp_Variable_Function_Instance\UnityLesson_CSharp_Variable_Function_Instance.csproj", "{669EB230-0BA6-41DD-BA04-A31B2408C5B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnityLesson_Csharp_StaticExample", "UnityLesson_Csharp_StaticExample\UnityLesson_Csharp_StaticExample.csproj", "{557FA93A-5A49-4E7B-888B-12CAAD770509}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityLesson_Csharp_StaticExample", "UnityLesson_Csharp_StaticExample\UnityLesson_Csharp_StaticExample.csproj", "{557FA93A-5A49-4E7B-888B-12CAAD770509}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "unitiyLesson_CSharp_Program", "unitiyLesson_CSharp_Program\unitiyLesson_CSharp_Program.csproj", "{122C6CC2-B4F9-40B7-B506-01FA02735162}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnityLesson_CSharp_Variables_Function", "unityLesson_CSharp_Variables_Function\UnityLesson_CSharp_Variables_Function.csproj", "{3A53C15D-A665-4A35-8C9F-FF59479942CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,10 +25,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3F2C1B8F-484B-41CD-BA46-523E6ED494B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3F2C1B8F-484B-41CD-BA46-523E6ED494B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3F2C1B8F-484B-41CD-BA46-523E6ED494B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3F2C1B8F-484B-41CD-BA46-523E6ED494B4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F4C12AFA-B346-4457-8B4A-D57FCE594862}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F4C12AFA-B346-4457-8B4A-D57FCE594862}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4C12AFA-B346-4457-8B4A-D57FCE594862}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -41,10 +37,6 @@ Global
 		{6E3585A4-9725-404D-89B1-49FBF2E96BB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E3585A4-9725-404D-89B1-49FBF2E96BB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E3585A4-9725-404D-89B1-49FBF2E96BB4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{714BB273-9895-4D4A-B892-96188186D3EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{714BB273-9895-4D4A-B892-96188186D3EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{714BB273-9895-4D4A-B892-96188186D3EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{714BB273-9895-4D4A-B892-96188186D3EF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5EBDFE88-8EAD-4ADC-979C-C924BC435D80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5EBDFE88-8EAD-4ADC-979C-C924BC435D80}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5EBDFE88-8EAD-4ADC-979C-C924BC435D80}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -57,6 +49,14 @@ Global
 		{557FA93A-5A49-4E7B-888B-12CAAD770509}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{557FA93A-5A49-4E7B-888B-12CAAD770509}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{557FA93A-5A49-4E7B-888B-12CAAD770509}.Release|Any CPU.Build.0 = Release|Any CPU
+		{122C6CC2-B4F9-40B7-B506-01FA02735162}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{122C6CC2-B4F9-40B7-B506-01FA02735162}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{122C6CC2-B4F9-40B7-B506-01FA02735162}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{122C6CC2-B4F9-40B7-B506-01FA02735162}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A53C15D-A665-4A35-8C9F-FF59479942CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A53C15D-A665-4A35-8C9F-FF59479942CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A53C15D-A665-4A35-8C9F-FF59479942CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A53C15D-A665-4A35-8C9F-FF59479942CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
