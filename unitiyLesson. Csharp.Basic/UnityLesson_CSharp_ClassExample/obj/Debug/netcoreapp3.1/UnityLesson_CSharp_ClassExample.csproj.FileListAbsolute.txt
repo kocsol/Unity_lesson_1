@@ -1,0 +1,14 @@
+C:\Users\User\Documents\GitHub\Unity_lesson_1\unitiyLesson. Csharp.Basic\UnityLesson_CSharp_ClassExample\bin\Debug\netcoreapp3.1\UnityLesson_CSharp_ClassExample.exe
+C:\Users\User\Documents\GitHub\Unity_lesson_1\unitiyLesson. Csharp.Basic\UnityLesson_CSharp_ClassExample\bin\Debug\netcoreapp3.1\UnityLesson_CSharp_ClassExample.deps.json
+C:\Users\User\Documents\GitHub\Unity_lesson_1\unitiyLesson. Csharp.Basic\UnityLesson_CSharp_ClassExample\bin\Debug\netcoreapp3.1\UnityLesson_CSharp_ClassExample.runtimeconfig.json
+C:\Users\User\Documents\GitHub\Unity_lesson_1\unitiyLesson. Csharp.Basic\UnityLesson_CSharp_ClassExample\bin\Debug\netcoreapp3.1\UnityLesson_CSharp_ClassExample.runtimeconfig.dev.json
+C:\Users\User\Documents\GitHub\Unity_lesson_1\unitiyLesson. Csharp.Basic\UnityLesson_CSharp_ClassExample\bin\Debug\netcoreapp3.1\UnityLesson_CSharp_ClassExample.dll
+C:\Users\User\Documents\GitHub\Unity_lesson_1\unitiyLesson. Csharp.Basic\UnityLesson_CSharp_ClassExample\bin\Debug\netcoreapp3.1\UnityLesson_CSharp_ClassExample.pdb
+C:\Users\User\Documents\GitHub\Unity_lesson_1\unitiyLesson. Csharp.Basic\UnityLesson_CSharp_ClassExample\obj\Debug\netcoreapp3.1\UnityLesson_CSharp_ClassExample.csproj.AssemblyReference.cache
+C:\Users\User\Documents\GitHub\Unity_lesson_1\unitiyLesson. Csharp.Basic\UnityLesson_CSharp_ClassExample\obj\Debug\netcoreapp3.1\UnityLesson_CSharp_ClassExample.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Documents\GitHub\Unity_lesson_1\unitiyLesson. Csharp.Basic\UnityLesson_CSharp_ClassExample\obj\Debug\netcoreapp3.1\UnityLesson_CSharp_ClassExample.AssemblyInfoInputs.cache
+C:\Users\User\Documents\GitHub\Unity_lesson_1\unitiyLesson. Csharp.Basic\UnityLesson_CSharp_ClassExample\obj\Debug\netcoreapp3.1\UnityLesson_CSharp_ClassExample.AssemblyInfo.cs
+C:\Users\User\Documents\GitHub\Unity_lesson_1\unitiyLesson. Csharp.Basic\UnityLesson_CSharp_ClassExample\obj\Debug\netcoreapp3.1\UnityLesson_CSharp_ClassExample.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\GitHub\Unity_lesson_1\unitiyLesson. Csharp.Basic\UnityLesson_CSharp_ClassExample\obj\Debug\netcoreapp3.1\UnityLesson_CSharp_ClassExample.dll
+C:\Users\User\Documents\GitHub\Unity_lesson_1\unitiyLesson. Csharp.Basic\UnityLesson_CSharp_ClassExample\obj\Debug\netcoreapp3.1\UnityLesson_CSharp_ClassExample.pdb
+C:\Users\User\Documents\GitHub\Unity_lesson_1\unitiyLesson. Csharp.Basic\UnityLesson_CSharp_ClassExample\obj\Debug\netcoreapp3.1\UnityLesson_CSharp_ClassExample.genruntimeconfig.cache
