@@ -12,6 +12,12 @@ namespace UnityLesson_CSharp_Operator
         {
             return a + b;
         }
+        //함수 오버로딩 
+        static public float Sum(float a, float b) //메인에서는 static 함수만 사용 할 수 있음.
+        {
+            return a + b;
+        }
+
         //뺄셈
         static public int Sub(int a, int b)
         {
@@ -96,7 +102,7 @@ namespace UnityLesson_CSharp_Operator
         //====================================
         //논리연산
 
-        static public bool LogicOR(bool a bool b)
+        static public bool LogicOR(bool a, bool b)
         {
             return a | b;
         }

@@ -10,12 +10,26 @@ namespace UnityLesson_CSharp_Operator
             int b = 5;
             int c;
 
+            float a_f = 14.0f;
+            float b_f = 5.0f;
+            float c_f;
+
             //산술 연산
             //덧셈, 뺄셈. 나눗셈, 곱셈. 나머지셈
             // =======================
             //덧셈
             c = a + b;
             c = FunctionsForOperators.Sum(a, b);
+
+            c_f = FunctionsForOperators.Sum(a_f, b_f);   //빨간색으로 뜸 why? sum 함수는 int를 넣어줘야하는데 a_f,b_f는 float라 그럼
+            // 그러면 새로운 함수를 만들어야 하지만 sum할 수 있는것이 int, float 만 있는게 아니라 더 많은데 그때마다 계속 만들어 줄 수 없다.
+            // 그렇다면 어떻게?
+            // 그래서 지원하는것이 ""함수 오버로딩!""
+
+            //함수 오버로딩
+            //인수가 다르지만 같은 이름의 함수를 여러개 만들 수 있는 기능
+            //사실 우리는 많이 썼었음 WriteLine 함수가 이것임 더블 클릭하고 F12하면 WriteLine이 오버로딩 하는 것들이 뜸
+
             Console.WriteLine(c);
             c = FunctionsForOperators.Sum(a,b);
             //뺼셈

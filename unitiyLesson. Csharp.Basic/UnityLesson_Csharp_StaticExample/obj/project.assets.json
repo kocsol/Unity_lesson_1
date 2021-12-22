@@ -8,19 +8,19 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\성현\\.nuget\\packages\\": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\성현\\Documents\\GitHub\\Unity_lesson_1\\unitiyLesson. Csharp.Basic\\UnityLesson_Csharp_StaticExample\\UnityLesson_Csharp_StaticExample.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Documents\\GitHub\\Unity_lesson_1\\unitiyLesson. Csharp.Basic\\UnityLesson_Csharp_StaticExample\\UnityLesson_Csharp_StaticExample.csproj",
       "projectName": "UnityLesson_Csharp_StaticExample",
-      "projectPath": "C:\\Users\\성현\\Documents\\GitHub\\Unity_lesson_1\\unitiyLesson. Csharp.Basic\\UnityLesson_Csharp_StaticExample\\UnityLesson_Csharp_StaticExample.csproj",
-      "packagesPath": "C:\\Users\\성현\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\성현\\Documents\\GitHub\\Unity_lesson_1\\unitiyLesson. Csharp.Basic\\UnityLesson_Csharp_StaticExample\\obj\\",
+      "projectPath": "C:\\Users\\User\\Documents\\GitHub\\Unity_lesson_1\\unitiyLesson. Csharp.Basic\\UnityLesson_Csharp_StaticExample\\UnityLesson_Csharp_StaticExample.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\User\\Documents\\GitHub\\Unity_lesson_1\\unitiyLesson. Csharp.Basic\\UnityLesson_Csharp_StaticExample\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\성현\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -60,7 +60,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

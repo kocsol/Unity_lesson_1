@@ -1,0 +1,13 @@
+C:\Users\User\Documents\GitHub\Unity_lesson_1\unitiyLesson. Csharp.Basic\UnityLesson_CSharp_WhileLoop\bin\Debug\netcoreapp3.1\UnityLesson_CSharp_WhileLoop.exe
+C:\Users\User\Documents\GitHub\Unity_lesson_1\unitiyLesson. Csharp.Basic\UnityLesson_CSharp_WhileLoop\bin\Debug\netcoreapp3.1\UnityLesson_CSharp_WhileLoop.deps.json
+C:\Users\User\Documents\GitHub\Unity_lesson_1\unitiyLesson. Csharp.Basic\UnityLesson_CSharp_WhileLoop\bin\Debug\netcoreapp3.1\UnityLesson_CSharp_WhileLoop.runtimeconfig.json
+C:\Users\User\Documents\GitHub\Unity_lesson_1\unitiyLesson. Csharp.Basic\UnityLesson_CSharp_WhileLoop\bin\Debug\netcoreapp3.1\UnityLesson_CSharp_WhileLoop.runtimeconfig.dev.json
+C:\Users\User\Documents\GitHub\Unity_lesson_1\unitiyLesson. Csharp.Basic\UnityLesson_CSharp_WhileLoop\bin\Debug\netcoreapp3.1\UnityLesson_CSharp_WhileLoop.dll
+C:\Users\User\Documents\GitHub\Unity_lesson_1\unitiyLesson. Csharp.Basic\UnityLesson_CSharp_WhileLoop\bin\Debug\netcoreapp3.1\UnityLesson_CSharp_WhileLoop.pdb
+C:\Users\User\Documents\GitHub\Unity_lesson_1\unitiyLesson. Csharp.Basic\UnityLesson_CSharp_WhileLoop\obj\Debug\netcoreapp3.1\UnityLesson_CSharp_WhileLoop.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Documents\GitHub\Unity_lesson_1\unitiyLesson. Csharp.Basic\UnityLesson_CSharp_WhileLoop\obj\Debug\netcoreapp3.1\UnityLesson_CSharp_WhileLoop.AssemblyInfoInputs.cache
+C:\Users\User\Documents\GitHub\Unity_lesson_1\unitiyLesson. Csharp.Basic\UnityLesson_CSharp_WhileLoop\obj\Debug\netcoreapp3.1\UnityLesson_CSharp_WhileLoop.AssemblyInfo.cs
+C:\Users\User\Documents\GitHub\Unity_lesson_1\unitiyLesson. Csharp.Basic\UnityLesson_CSharp_WhileLoop\obj\Debug\netcoreapp3.1\UnityLesson_CSharp_WhileLoop.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\GitHub\Unity_lesson_1\unitiyLesson. Csharp.Basic\UnityLesson_CSharp_WhileLoop\obj\Debug\netcoreapp3.1\UnityLesson_CSharp_WhileLoop.dll
+C:\Users\User\Documents\GitHub\Unity_lesson_1\unitiyLesson. Csharp.Basic\UnityLesson_CSharp_WhileLoop\obj\Debug\netcoreapp3.1\UnityLesson_CSharp_WhileLoop.pdb
+C:\Users\User\Documents\GitHub\Unity_lesson_1\unitiyLesson. Csharp.Basic\UnityLesson_CSharp_WhileLoop\obj\Debug\netcoreapp3.1\UnityLesson_CSharp_WhileLoop.genruntimeconfig.cache

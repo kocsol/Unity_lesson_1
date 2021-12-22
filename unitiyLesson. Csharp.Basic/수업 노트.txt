@@ -67,13 +67,35 @@ Orc는 현재 놀고있는가? 예
 
 
 
+21/12/22
+git hub 사용법
+1.학원에서 작업
+2.학원 컴퓨터 git desktop에 changes로 뜨고 
+3.commit하면 history에 올라가고 push
 
+-> 이 과정을 거치면 git hub 클라우드 서버에 올라감
 
+1. 집 pc를 보면 pull할게 있다고 뜸. 
+2. 하면됨
+1. 그런데 pull and push라고 뜨면 필요한 내용을 백업(다른 폴더에 사본을 만들어 놓음) 
+2. change 우클릭 discard, (코밋했으면 코밋한거에 우클릭 undo commit 취소됨)
+3. 그러면 pull만뜸 
+4. 그러면 원래 있던 건. 필요한 폴더]
+더 궁금한것 git hub 사용법 인터넷에 쳐서 알아보기
 
+오늘 할 것
+1. 함수 오버로딩
+2. 배열
+3. 반복문 (while, for)
 
+1.함수 오버로딩 쉽게 말하면 함수 하나가 여러가지 메소드를 사용할 수 잇게
 
+2. 배열 : 정적 데이터 공간
 
-
+3. 반복문 
+while, for, Do While(실제로 쓰는 경우가 거의 없음), For each(나중)
+분기문
+if, switch- case
 
 
 
