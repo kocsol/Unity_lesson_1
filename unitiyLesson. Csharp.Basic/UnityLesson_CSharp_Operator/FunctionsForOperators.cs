@@ -12,6 +12,143 @@ namespace UnityLesson_CSharp_Operator
         {
             return a + b;
         }
-        //원노트에 있는 함수들 쓰고 program에서 만든 함수들 써보기
+        //뺄셈
+        static public int Sub(int a, int b)
+        {
+            return a - b;
+        }
+        //나눗셈
+        static public int Div(int a, int b)
+        {
+            return a / b;
+        }
+        //곲셈
+        static public int Mul(int a, int b)
+        {
+            return a * b;
+        }
+        //나머지셈
+        static public int Mod(int a, int b)
+        {
+            return a % b;
+        }
+        //=================================================================
+        // 증감 연산
+        static public int Increase(int a)
+        {
+            return a++;
+        }
+        static public int Decrease(int a)
+        {
+            return a--;
+        }
+
+        //============================================================
+        //관계연산
+        //같은가?
+        static public bool IsSame(int a, int b)
+        {
+            return a == b;
+        }
+        static public bool IsDifferent(int a, int b)
+        {
+            return a != b;
+        }
+        static public bool IsBigger(int a, int b)
+        {
+            return a > b;
+        }
+        static public bool IsBiggerOrSame(int a, int b)
+        {
+            return a >= b;
+        }
+        static public bool IsSmaller(int a, int b)
+        {
+            return a < b;
+        }
+        static public bool IsSmallerOrSame(int a, int b)
+        {
+            return a <= b;
+        }
+        // ==========================================================
+        //대입연산자
+        static public int PlusBTOA(int a, int b)
+        {
+            return a += b;
+        }
+        static public int MinusBTOA(int a, int b)
+        {
+            return a -= b;
+        }
+        static public int DivBToA(int a, int b)
+        {
+            return a /= b;
+        }
+        static public int MulBTOA(int a, int b)
+        {
+            return a *= b;
+        }
+        static public int ModBToA(int a, int b)
+        {
+            return a %= b;
+        }
+
+        //====================================
+        //논리연산
+
+        static public bool LogicOR(bool a bool b)
+        {
+            return a | b;
+        }
+        static public bool LogidAND(bool a, bool b)
+        {
+            return a & b;
+        }
+        static public bool LogicNOT(bool a)
+        {
+            return !a;
+        }
+        static public bool LogicXOR(bool a, bool b)
+        {
+            return a ^ b;
+        }
+
+        //==========================
+        //조건부 연산
+        static public  bool ConditionalLogicOR(bool a, bool b)
+        {
+            return a || b;
+        }
+        static public bool ConditionalLogicAND(bool a, bool b)
+        {
+            return a && b;
+        }
+        //=============================================================
+        //비트연산
+        static public int BitLogicOR(int a, int b)
+        {
+            return a | b;
+        }
+        static public int BitLogicAND(int a, int b)
+        {
+            return a & b;
+        }
+        static public int BitLogicNOT(int a)
+        {
+            return ~a;
+        }
+        static public int BitLogicXOR(int a, int b)
+        {
+            return a ^ b;
+        }
+        static public int  BitShiftLeft(int a, int howManyBitsYouWantToShift)
+        {
+            return a << howManyBitsYouWantToShift;
+        }
+        static public int BItShiftRight(int a, int howManyBitsYouWantToShift)
+        {
+            return a >> howManyBitsYouWantToShift;
+        }
+
     }
 }
