@@ -15,14 +15,34 @@ namespace UnityLesson_CSharp_ForLoopExample
             {
                 arr_Orc[i] = new Orc();
                 arr_Orc[i].name = $"오크{i}";
+                arr_Orc[i].isResting = GetRandomBool();
             }
-        
-        
-          
+            for (int i = 0; i < length; i++)
+            {
+                if (arr_Orc[i].isResting)
+                {
+                    arr_Orc[i].Jump();
+                }
+
+            }
 
 
         }
-    }
+        static public bool GetRandomBool()
+        {
+            Random rand = new Random(); // 랜덤 클라스 객체 생성
+            bool value = Convert.ToBoolean(rand.Next(0, 2)); //0또는 1출력, Next 함수는 minValue ~ maxValue -1 범위.....bool값으로 나타낼때 0이면 false 고 나머지는 다 true 임    
+            return value;
+        }
+
+    }   
+
+
+        
+
+
+
+
     class Orc
     {
         public string name;
@@ -46,4 +66,5 @@ namespace UnityLesson_CSharp_ForLoopExample
             Console.WriteLine($"{name} (이)가 점프했다!");
         }
     }
+
 }
