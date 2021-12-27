@@ -1,0 +1,14 @@
+C:\Users\User\Documents\GitHub\Unity_lesson_1\unitiyLesson. Csharp.Basic\UnityLesson_CSharp_Enum\obj\Debug\netcoreapp3.1\UnityLesson_CSharp_Enum.csproj.AssemblyReference.cache
+C:\Users\User\Documents\GitHub\Unity_lesson_1\unitiyLesson. Csharp.Basic\UnityLesson_CSharp_Enum\obj\Debug\netcoreapp3.1\UnityLesson_CSharp_Enum.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Documents\GitHub\Unity_lesson_1\unitiyLesson. Csharp.Basic\UnityLesson_CSharp_Enum\obj\Debug\netcoreapp3.1\UnityLesson_CSharp_Enum.AssemblyInfoInputs.cache
+C:\Users\User\Documents\GitHub\Unity_lesson_1\unitiyLesson. Csharp.Basic\UnityLesson_CSharp_Enum\obj\Debug\netcoreapp3.1\UnityLesson_CSharp_Enum.AssemblyInfo.cs
+C:\Users\User\Documents\GitHub\Unity_lesson_1\unitiyLesson. Csharp.Basic\UnityLesson_CSharp_Enum\obj\Debug\netcoreapp3.1\UnityLesson_CSharp_Enum.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\GitHub\Unity_lesson_1\unitiyLesson. Csharp.Basic\UnityLesson_CSharp_Enum\bin\Debug\netcoreapp3.1\UnityLesson_CSharp_Enum.exe
+C:\Users\User\Documents\GitHub\Unity_lesson_1\unitiyLesson. Csharp.Basic\UnityLesson_CSharp_Enum\bin\Debug\netcoreapp3.1\UnityLesson_CSharp_Enum.deps.json
+C:\Users\User\Documents\GitHub\Unity_lesson_1\unitiyLesson. Csharp.Basic\UnityLesson_CSharp_Enum\bin\Debug\netcoreapp3.1\UnityLesson_CSharp_Enum.runtimeconfig.json
+C:\Users\User\Documents\GitHub\Unity_lesson_1\unitiyLesson. Csharp.Basic\UnityLesson_CSharp_Enum\bin\Debug\netcoreapp3.1\UnityLesson_CSharp_Enum.runtimeconfig.dev.json
+C:\Users\User\Documents\GitHub\Unity_lesson_1\unitiyLesson. Csharp.Basic\UnityLesson_CSharp_Enum\bin\Debug\netcoreapp3.1\UnityLesson_CSharp_Enum.dll
+C:\Users\User\Documents\GitHub\Unity_lesson_1\unitiyLesson. Csharp.Basic\UnityLesson_CSharp_Enum\bin\Debug\netcoreapp3.1\UnityLesson_CSharp_Enum.pdb
+C:\Users\User\Documents\GitHub\Unity_lesson_1\unitiyLesson. Csharp.Basic\UnityLesson_CSharp_Enum\obj\Debug\netcoreapp3.1\UnityLesson_CSharp_Enum.dll
+C:\Users\User\Documents\GitHub\Unity_lesson_1\unitiyLesson. Csharp.Basic\UnityLesson_CSharp_Enum\obj\Debug\netcoreapp3.1\UnityLesson_CSharp_Enum.pdb
+C:\Users\User\Documents\GitHub\Unity_lesson_1\unitiyLesson. Csharp.Basic\UnityLesson_CSharp_Enum\obj\Debug\netcoreapp3.1\UnityLesson_CSharp_Enum.genruntimeconfig.cache

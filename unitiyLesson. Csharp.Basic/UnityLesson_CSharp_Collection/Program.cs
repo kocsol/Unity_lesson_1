@@ -88,13 +88,48 @@ namespace UnityLesson_CSharp_Collection
 			}
 			//위 세가지 경우가 있지만
 			//dictionary는 단어 뜻대로 사전처럼 사용하기 위한 collection이ㅏㄷ.
-			//자세한 내용은 onenote 에 잘 적혀있다. 12/24일 원노트 내용
-					
-					
-		}
+			//자세한 내용은 onenote 에 잘 적혀있다. 12/24일 원노트 내용 collection 참고
 
- 			//Stack  후입선출
-			//queue  선입선출
+			//========================================
+			//Queue( List와 비슷하나 FiFO(first input first output 선입선출)
+			//=======================================================
+			Queue<int> _queue = new Queue<int>();
+
+			_queue.Enqueue(10);
+			_queue.Enqueue(20);
+			_queue.Enqueue(30);
+
+			Console.WriteLine(_queue.Peek()); // 가장 첫번째 값을 리턴
+			Console.WriteLine(_queue.Dequeue());   // 첫번째에 있는 값을 Queued에서 빼고 리턴
+			Console.WriteLine(_queue.Dequeue());
+			Console.WriteLine(_queue.Dequeue());
+
+
+			//========================================================
+			//stack은 후입 선출 리스트와 비슷하나 다른다. Last Input Fist Output
+			//==========================================================
+			Stack<int> _stack = new Stack<int>();
+
+			_stack.Push(10);
+			_stack.Push(20);
+			_stack.Push(30);
+
+			Console.WriteLine(_stack.Peek()); // 가장 마지막에 있는 값을 리턴
+			Console.WriteLine(_stack.Pop()); // 가장 마지막에 있는 값을 stack에서 빼고 리턴
+			Console.WriteLine(_stack.Pop());
+			Console.WriteLine(_stack.Pop());
+
+
+
+
+
+
+
+
+
+
+
+
 
 		}
 	}

@@ -11,3 +11,4 @@ C:\Users\User\Documents\GitHub\Unity_lesson_1\unitiyLesson. Csharp.Basic\UnityLe
 C:\Users\User\Documents\GitHub\Unity_lesson_1\unitiyLesson. Csharp.Basic\UnityLesson_CSharp_Collection\obj\Debug\netcoreapp3.1\UnityLesson_CSharp_Collection.dll
 C:\Users\User\Documents\GitHub\Unity_lesson_1\unitiyLesson. Csharp.Basic\UnityLesson_CSharp_Collection\obj\Debug\netcoreapp3.1\UnityLesson_CSharp_Collection.pdb
 C:\Users\User\Documents\GitHub\Unity_lesson_1\unitiyLesson. Csharp.Basic\UnityLesson_CSharp_Collection\obj\Debug\netcoreapp3.1\UnityLesson_CSharp_Collection.genruntimeconfig.cache
+C:\Users\User\Documents\GitHub\Unity_lesson_1\unitiyLesson. Csharp.Basic\UnityLesson_CSharp_Collection\obj\Debug\netcoreapp3.1\UnityLesson_CSharp_Collection.csproj.AssemblyReference.cache
