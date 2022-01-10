@@ -1,0 +1,537 @@
+Class Inheritance 
+Student 
+St니dent Number 
+Average Mark 
+Is Eligible TO Enroll 
+Get Seminars Taken 
+자식 
+Name 
+Phone Number 
+Email Address 
+Purchase Parking Pass 
+상속은 세분화가 럍이도Ⅰ년 끝이 월수로 =이 유지보수 월니장성이 출이진二i 
+상속 
+Professor 
+Creeture 
+LifeTime 
+Weight 
+Breath() 
+Elephent 
+*卜소 고 
+°쬐 간계를 만드는 이유 
+끝은 클러스클이 공부직여인 기능! 점보를 필요로 하는 경우 
+사람 7월 사, 코끼리 
+듬의 수럍은 들를이 다한 클래스를 만들었고 
+자시 
+Salary 
+이 모든 동물클은 수취기 라는 기능이 있다 
+근화 숨쉬기 라는 기능이 다다 수정하거나 삭최화야화는 경우 
+ah스를 하나하나 다 수정하야한다 
+화지만 , 위처럼 Creature 라는 부도를ah스로부# 수취기 라는 기능클 
+상속받은 경우 Creature 의 숨쉬기라 는 기능만 련경하뎐 아래 모든 
+클다스클0Ⅰ 독같이 직역용클 받들 수 있다 
+ 
+
+///==================== Creature ==================/// 
+
+using System; 
+
+using System.Collections.Generic; 
+
+using System.Text; 
+
+  
+
+namespace UnityLesson_CSharp_ClassInheritance 
+
+{ 
+
+    class Creature 
+
+    { 
+
+        public string DNA; 
+
+        public int lifeTime; 
+
+        public float weight; 
+
+        // 함수 오버라이드 ( override ) 
+
+        // 함수를 재정의 하는 기능 
+
+        // virtual 키워드 : 해당 함수를 오버라이딩 가능하도록 해준다.  
+
+        // 부모클래스의 함수라고 해서 virutal 키워드를 전부 붙이는게 아니라 
+
+        // 자식클래스가 해당 함수를 재정의 해야 할 떄만 virtual 키워드를 붙여준다. 
+
+        virtual public void Breath() 
+
+        { 
+
+            lifeTime++; 
+
+        } 
+
+    } 
+
+} 
+
+ 
+
+///==================== Human==================/// 
+
+using System; 
+
+using System.Collections.Generic; 
+
+using System.Text; 
+
+  
+
+namespace UnityLesson_CSharp_ClassInheritance 
+
+{ 
+
+    class Human : Creature , iTwoLeggedWalker 
+
+    { 
+
+        public float height; 
+
+  
+
+        // override 키워드 : 부모의 virtual 키워드가 붙은 함수를 재정의 하는 키워드 
+
+        public override void Breath() 
+
+        { 
+
+            base.Breath(); // base 키워드는 부모 클래스를 지칭함.  
+
+            weight += 0.00002f; 
+
+            height += 0.00004f; 
+
+        } 
+
+  
+
+        public void TwoLeggedWalk() 
+
+        { 
+
+            Console.WriteLine("두발로 걷는다"); 
+
+        } 
+
+    } 
+
+} 
+
+///==================== YellowMan==================/// 
+
+using System; 
+
+using System.Collections.Generic; 
+
+using System.Text; 
+
+  
+
+namespace UnityLesson_CSharp_ClassInheritance 
+
+{ 
+
+    class YellowMan : Human 
+
+    { 
+
+    } 
+
+} 
+
+///==================== BlackMan==================/// 
+
+using System; 
+
+using System.Collections.Generic; 
+
+using System.Text; 
+
+  
+
+namespace UnityLesson_CSharp_ClassInheritance 
+
+{ 
+
+    class BlackMan : Human 
+
+    { 
+
+        public override void Breath() 
+
+        { 
+
+            lifeTime++; 
+
+            weight += 0.00004f; 
+
+            height += 0.00006f; 
+
+        } 
+
+    } 
+
+} 
+
+///==================== WhiteMan==================/// 
+
+using System; 
+
+using System.Collections.Generic; 
+
+using System.Text; 
+
+  
+
+namespace UnityLesson_CSharp_ClassInheritance 
+
+{ 
+
+    class WhiteMan : Human  
+
+    { 
+
+        public override void Breath() 
+
+        { 
+
+            lifeTime++; 
+
+            weight += 0.00003f; 
+
+            height += 0.00005f; 
+
+        } 
+
+    } 
+
+} 
+
+ 
+
+///==================== Dog==================/// 
+
+using System; 
+
+using System.Collections.Generic; 
+
+using System.Text; 
+
+  
+
+namespace UnityLesson_CSharp_ClassInheritance 
+
+{ 
+
+    class Dog : Creature , iFourLeggedWalker 
+
+    { 
+
+        public float tailLength; 
+
+  
+
+        public void FourLeggedWalk() 
+
+        { 
+
+            Console.WriteLine("네발로 걷는다"); 
+
+        } 
+
+    } 
+
+} 
+
+///==================== iTwoLeggedWalker==================/// 
+
+using System; 
+
+using System.Collections.Generic; 
+
+using System.Text; 
+
+  
+
+namespace UnityLesson_CSharp_ClassInheritance 
+
+{ 
+
+    // interface  
+
+    // 클래스랑 비슷하게 생겼지만 
+
+    // 함수, 이벤트, 인덱서, 속성(Attribute) 만 멤버로 가질 수 있고 
+
+    // 각 멤버는 기본적으로 접근 권한자가 public  
+
+    // 멤버들은 선언만 할 뿐 정의하지 않는다. ( 어떤 기능에 대한 이름만 명시하고 내용 구현은 안한다) 
+
+    // 클래스와 다르게 다중상속이 가능하다.  
+
+    // 클래스의 추상화를 할때, 함수들이 같은 이름이 필요한 경우 집합으로 명시하고 따로 관리할수 있다.  
+
+    interface iTwoLeggedWalker 
+
+    { 
+
+        void TwoLeggedWalk(); 
+
+    } 
+
+} 
+
+///==================== iFourLeggedWalker==================/// 
+
+using System; 
+
+using System.Collections.Generic; 
+
+using System.Text; 
+
+  
+
+namespace UnityLesson_CSharp_ClassInheritance 
+
+{ 
+
+    interface iFourLeggedWalker 
+
+    { 
+
+        void FourLeggedWalk(); 
+
+    } 
+
+} 
+
+///==================== Program==================/// 
+
+using System; 
+
+using System.Collections.Generic; 
+
+  
+
+namespace UnityLesson_CSharp_ClassInheritance 
+
+{ 
+
+    class Program 
+
+    { 
+
+        static void Main(string[] args) 
+
+        { 
+
+            Creature creature = new Creature(); 
+
+            creature.Breath(); 
+
+  
+
+            Human human = new Human(); 
+
+            human.Breath(); 
+
+  
+
+            Dog dog = new Dog(); 
+
+            dog.Breath(); 
+
+  
+
+            // 황인,백인,흑인을 두발로 걷게 하고싶다~ 
+
+            //================================================= 
+
+  
+
+            // 그냥 객체 멤버 함수 호출 
+
+            YellowMan yellowMan1 = new YellowMan(); 
+
+            BlackMan blackMan1 = new BlackMan(); 
+
+            WhiteMan whiteMan1 = new WhiteMan(); 
+
+  
+
+            yellowMan1.TwoLeggedWalk(); 
+
+            blackMan1.TwoLeggedWalk(); 
+
+            whiteMan1.TwoLeggedWalk(); 
+
+  
+
+            // 인터페이스 활용 
+
+            iTwoLeggedWalker yellowMan1_iTwoLeggedWalker = yellowMan1; 
+
+            iTwoLeggedWalker blackMan1_iTwoLeggedWalker = blackMan1; 
+
+            iTwoLeggedWalker whiteMan1_iTwoLeggedWalker = whiteMan1; 
+
+  
+
+            List<iTwoLeggedWalker> list_TwoLeggedWalker = new List<iTwoLeggedWalker>(); 
+
+            list_TwoLeggedWalker.Add(yellowMan1_iTwoLeggedWalker); 
+
+            list_TwoLeggedWalker.Add(blackMan1_iTwoLeggedWalker); 
+
+            list_TwoLeggedWalker.Add(whiteMan1_iTwoLeggedWalker); 
+
+  
+
+            foreach (iTwoLeggedWalker twoLeggedWalker in list_TwoLeggedWalker) 
+
+            { 
+
+                twoLeggedWalker.TwoLeggedWalk(); 
+
+            } 
+
+             
+
+  
+
+        } 
+
+    } 
+
+} 
+
+ 
+
+ 
+
+ 
+
+ 
+SOLID 원칙
+객체지향 프로그래밍을 할때 반드시 지켜주어야 하는 5가지 원칙 
+
+ 
+
+SRP( Single Responsibility Principle, 단일 책임 원칙 )  
+
+ 
+
+한 클래스는 하나의 책임만 가져야 함. 여러가지 기능이나 개념을 한 클래스에 다 넣으면 수정하기도 불편하고 각 클래스에 대한 확장성, 가독성이 떨어짐.  
+
+ 
+
+OCP ( Open Close Principle, 개방 폐쇄의 원칙 ) 
+
+ 
+
+재사용 가능하고 관리하기 편한 코드를 만들기 위한 원칙. 
+
+컴포넌트, 클래스, 모듈, 함수 의 확장에는 열려있고 변경에는 닫혀있어야한다. 
+
+-> 레고 블록을 처음에 다양하고 정확하게 설계해서, 레고끼리 조립 호환성을 높게 설계한다. 
+
+조립 도중에 레고블록이 안맞다고해서 레고블록 자체를 자르거나 불로 녹이는 등의 행위 를 하면 안된다. 
+
+ 
+
+LSP ( The Liskov Substitution Principle, 리스코프 치환 법칙 ) 
+
+ 
+
+하위타입은 기반타입으로 언제든지 교체할수 있어야 한다. 
+
+기반인 부모클래스로부터 상속받은 하위인 자식클래스가 함수를 오버라이드 해서 사용할 경우, 언제든지 오버라이드된 함수를 지워서 기반인 부모의 원 함수로 교체 할 수 있어야 함. (교체한 후에도 코드가 문제없이 동작해야한다는 뜻) 
+
+리스코프 치환법칙을 지키기 위해서는 특히 다음 4 가지를 지키면 된다. 
+
+ 
+
+1) 두객체가 똑같은 일을 수행한다면 
+
+-> 클래스는 하나로 만들고, 각 객체를 구분지을 수 있는 변수를 만든다. 
+2) 기능 이름이 같고 동작은 비슷하나 약간의 차이가 있다면 
+
+-> 인터페이스를 구현해서 공통으로 상속받는다. 
+
+3) 같은 기능을 가지지 않는다면 
+
+-> 두 객체는 각각 별개의 클래스로구현함. 
+
+4) 추가적인 기능을 부여해야한다면 
+
+-> 상속을 이용한다. 
+
+ 
+
+ISP ( Interface Sergregration Principle , 인터페이스 분리 원칙 ) 
+
+ 
+
+사용 하지 않을 인터페이스는 구현하면 안되고,  
+
+하나의 일반적인 인터페이스보다 여러개의 구체적인 인터페이스를 추구함.  
+
+IPointerEvent 라는 인터페이스 보다 IPointerDownEvent, IPointerUPEvent, IPointerClickEvent 등으로 세분화 하는게 좋다.  
+
+ 
+
+DIP ( Dependencey Inversion Principle, 의존성 역전의 원칙 ) 
+
+ 
+
+"자신보다 변하기 쉬운것에 의존하지 마라" 
+
+ 
+
+ 
+
+«interface» 
+«interface» 
+«interface» 
+«interface» 
+«interface» 
+ 
+
+무기 예시 ( 무기가 각각 고유한 특수스킬을 가지고있어 인터페이스를 가질때 ) 
+
+전사 가 초보자용 칼을 사용할때, 
+
+전사는 초보자용 칼 인터페이스에 접근해서, 무기전용 특수 스킬 등을 가져옴. 
+
+전사가 레벨업을 해서 숙련자용 칼을 사용하려고 하면 
+
+전사의 무기에대한 인터페이스를 숙련자용 칼로 바꿔줘야함. 
+
+즉 전사가 초보자용 칼에 의존하고있는 상태. 
+
+초보자용 칼은 언제든지 다른칼로 바뀔 수 있어야 하므로 이런 의존관계를 만들면 안됨. 
+
+그래서 초보자용 칼과 숙련자용 칼 등, 모든 칼이 의존하는 부모 칼 인터페이스를 만들고 
+
+이 부모 칼 인터페이스는 변하지 않으므로 전사가 인터페이스로 채택했을때, 
+
+전사 클래스와 칼 인터페이스는 하나로 묶여서 초보자용 칼, 숙련자용 칼이 
+
+이제는 전사 클래스와 칼 인터페이스에 의존하게되는데 
+
+이를 의존성이 역전 되었다 라고 함. 
+
+ 

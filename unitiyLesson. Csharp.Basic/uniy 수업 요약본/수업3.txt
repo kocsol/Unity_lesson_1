@@ -1,0 +1,507 @@
+
+C# 변수 + 함수 클래스
+<<Program.cs>>
+using System; 
+
+  
+
+namespace Unity_CSharp_VariableAndFunction 
+
+{ 
+
+    class Program 
+
+    { 
+
+        static void Main(string[] args) 
+
+        { 
+
+        } 
+
+        // CamelCase (이름 설정 규칙 중 하나) 
+
+        // class, function namespace 등은 대문자로 시작한다.  
+
+        // 변수는 소문자로 시작한다. 
+
+        // 단어가 바뀔경우 첫 문자는 대문자로한다. 
+
+        // 줄임말은 되도록 사용하지 않는다. 
+
+        // 이름을 보았을때 어떤 기능, 목적인지 알 수 있도록 작성한다. 
+
+        // 애매한부분이 있으면 주석을 달아준다. 
+
+        class Person 
+
+        { 
+
+            int age; // 나이 
+
+            float height; // 키 
+
+            bool isFemale; // 여자인지? 
+
+            char genderChar; // 성별 문자 
+
+            string name; // 이름 
+
+  
+
+            void SayAllInfo() 
+
+            { 
+
+                //Console.WriteLine($"나이 : {age}, 키 : {height}, 여자인가? : {isFemale}, 성별문자: {genderChar}, 이름 : {name}"); 
+
+                SayAge(); 
+
+                SayHeight(); 
+
+                SayIsFemale(); 
+
+                SayGenderChar(); 
+
+                SayName(); 
+
+            } 
+
+            void SayAge() 
+
+            { 
+
+                Console.Write($"나이 : {age}"); 
+
+            } 
+
+            void SayHeight() 
+
+            { 
+
+                Console.Write($"키 : {height}"); 
+
+            } 
+
+            void SayIsFemale() 
+
+            { 
+
+                Console.Write($"여자인가? : {isFemale}"); 
+
+            } 
+
+            void SayGenderChar() 
+
+            { 
+
+                Console.Write($"성별문자 : {genderChar}"); 
+
+            } 
+
+            void SayName() 
+
+            { 
+
+                Console.Write($"이름 : {name}"); 
+
+            } 
+
+        } 
+
+    } 
+
+} 
+C# - Class, Object, Instance
+<<Program.cs>>
+using System; 
+
+  
+
+namespace Unity_CSharp_ClassObjectInstance 
+
+{ 
+
+    class Program 
+
+    { 
+
+        static void Main(string[] args) 
+
+        { 
+
+            // 객체생성 new 키워드 
+
+            // 객체를 생성했지만 메모리에 할당해주지 않았기 때문에 우리는접근할수가 없다. 
+
+            new AA();   // 생성자 : 클래스와 이름이 같은 함수  
+
+  
+
+            // 인스턴스화 
+
+            // 메모리 공간에 생성된 객체를 할당시킴.  
+
+            // AA 타입의 a 변수에 new AA() 로 생성된 객체가 할당 되었다. 
+
+            // 이제 소프트웨어 세계에서 우리는 a 에 접근할 수있다. 
+
+            AA a = new AA(); // 클래스와 같은 이름의 함수를 생성자 라고 한다. 
+
+            // 이때 AA 클래스타입의 변수 a 를 인스턴스 라고 함. 
+
+  
+
+        } 
+
+        // 클래스 AA (설계도) 
+
+        public class AA 
+
+        { 
+
+        } 
+
+    } 
+
+} 
+
+ 
+C# - 변수 + 함수 클래스
+<<Program.cs>>
+using System; 
+
+  
+
+namespace Unity_CSharp_InstanciationOfClassIncludingVariablesAndFunctions 
+
+{ 
+
+    class Program 
+
+    { 
+
+        static void Main(string[] args) 
+
+        { 
+
+            Person person1 = new Person(); 
+
+            // . 점연산자  
+
+            // 클래스의 멤버에 접근할때 사용 namespace 안의 클래스에 접근할때도 사용 
+
+            // 객체의 멤버에 접근할때도 사용. 
+
+            person1.name = "김아무개"; 
+
+            person1.age = 123; 
+
+            person1.height = 224.31f; 
+
+            person1.isFemale = false; 
+
+            person1.genderChar = '남'; 
+
+  
+
+            Person person2 = new Person(); 
+
+            person2.name = "이아무개"; 
+
+            person2.age = 78; 
+
+            person2.height = 124.11f; 
+
+            person2.isFemale = true; 
+
+            person2.genderChar = '여'; 
+
+  
+
+            // person1 객체에게 모든 정보를 말하라고 한다 
+
+            person1.SayAllInfo(); 
+
+            // person2 객체에게 나이를 말하라고 한다 
+
+            person2.SayAge(); 
+
+  
+
+        } 
+
+  
+
+    } 
+
+    class Person 
+
+    { 
+
+        // 접근제한자 : 자료형 앞에 붙여준다. 
+
+        // public, private ,protected 
+
+        // public : 다른 클래스가 접근 할수 있다. 
+
+        // private : 다른 클래스는 접근할 수 없다. 
+
+        // protected : 상속자만 접근할 수 있다.  
+
+        public int age; // 나이 
+
+        public float height; // 키 
+
+        public bool isFemale; // 여자인지? 
+
+        public char genderChar; // 성별 문자 
+
+        public string name; // 이름 
+
+  
+
+        public void SayAllInfo() 
+
+        { 
+
+            //Console.WriteLine($"나이 : {age}, 키 : {height}, 여자인가? : {isFemale}, 성별문자: {genderChar}, 이름 : {name}"); 
+
+            SayAge(); 
+
+            SayHeight(); 
+
+            SayIsFemale(); 
+
+            SayGenderChar(); 
+
+            SayName(); 
+
+        } 
+
+        public void SayAge() 
+
+        { 
+
+            Console.Write($"나이 : {age}"); 
+
+        } 
+
+        public void SayHeight() 
+
+        { 
+
+            Console.Write($"키 : {height}"); 
+
+        } 
+
+        public void SayIsFemale() 
+
+        { 
+
+            Console.Write($"여자인가? : {isFemale}"); 
+
+        } 
+
+        public void SayGenderChar() 
+
+        { 
+
+            Console.Write($"성별문자 : {genderChar}"); 
+
+        } 
+
+        public void SayName() 
+
+        { 
+
+            Console.Write($"이름 : {name}"); 
+
+        } 
+
+    } 
+
+} 
+
+ 
+C# - static 예제
+<<Program.cs>>
+using System; 
+
+  
+
+namespace Unity_CSharp_StaticExample 
+
+{ 
+
+    class Program 
+
+    { 
+
+        static void Main(string[] args) 
+
+        { 
+
+            // Person 클래스 타입의 객체를 두개 생성해서  
+
+            // Person 클래스 타입의 변수 person1, person2 에 각각 대입시켜줌 (인스턴스화) 
+
+            // person1 과 person2 인스턴스의 이름을 설정해줌 
+
+            Person person1 = new Person(); 
+
+            person1.name = "김아무개"; 
+
+  
+
+            Person person2 = new Person(); 
+
+            person2.name = "이아무개"; 
+
+  
+
+            Person.typeName = "사람 타입"; 
+
+            Orc.typeName = "오크 타입"; 
+
+  
+
+            // static 멤버(변수와 함수)는 객체 단위로 접근할수가없음. 
+
+            // 아래 person1 객체에서 SayTypeName() 이라는 static 함수를 호출시 에러가 나고  
+
+            // 클래스 Person 에서 SayTypeName() 을 호출했을 경우 정상적으로 동작함. 
+
+            // 즉 static 멤버는 클래스 자체의 정보 또는 기능. 
+
+            // 설계도로 어떤 객체를 생성한 후 그 객체에 접근하는것이 아니라 
+
+            // 설계도 자체에 접근해서 설계도에대한 정보나 기능들이 필요할 때 사용. 
+
+            person1.SayTypeName(); 
+
+            Person.SayTypeName(); 
+
+  
+
+            //static 으로 정의된 클래스는 객체생성 불가. 인스턴스화 불가. 
+
+            // 기존 클래스개념을 설계도와 비슷하다고 설명했으나, static 클래스는 설명서에 더 가까움. 
+
+            Orc orc1 = new Orc(); 
+
+             
+
+  
+
+        } 
+
+    } 
+
+    static class Orc 
+
+    { 
+
+        static public string typeName; 
+
+    } 
+
+    class Person 
+
+    { 
+
+        // 접근제한자 : 자료형 앞에 붙여준다. 
+
+        // public, private ,protected 
+
+        // public : 다른 클래스가 접근 할수 있다. 
+
+        // private : 다른 클래스는 접근할 수 없다. 
+
+        // protected : 상속자만 접근할 수 있다.  
+
+        public int age; // 나이 
+
+        public float height; // 키 
+
+        public bool isFemale; // 여자인지? 
+
+        public char genderChar; // 성별 문자 
+
+        public string name; // 이름 
+
+  
+
+        static public string typeName; //타입이름 
+
+        static public void SayTypeName() 
+
+        { 
+
+            Console.WriteLine(typeName); 
+
+        } 
+
+        public void SayAllInfo() 
+
+        { 
+
+            //Console.WriteLine($"나이 : {age}, 키 : {height}, 여자인가? : {isFemale}, 성별문자: {genderChar}, 이름 : {name}"); 
+
+            SayAge(); 
+
+            SayHeight(); 
+
+            SayIsFemale(); 
+
+            SayGenderChar(); 
+
+            SayName(); 
+
+        } 
+
+        public void SayAge() 
+
+        { 
+
+            Console.Write($"나이 : {age}"); 
+
+        } 
+
+        public void SayHeight() 
+
+        { 
+
+            Console.Write($"키 : {height}"); 
+
+        } 
+
+        public void SayIsFemale() 
+
+        { 
+
+            Console.Write($"여자인가? : {isFemale}"); 
+
+        } 
+
+        public void SayGenderChar() 
+
+        { 
+
+            Console.Write($"성별문자 : {genderChar}"); 
+
+        } 
+
+        public void SayName() 
+
+        { 
+
+            Console.Write($"이름 : {name}"); 
+
+        } 
+
+    } 
+
+} 
+
+ 

@@ -1,0 +1,353 @@
+구조체
+//=======================Program.cs===========================// 
+
+using System; 
+
+// structure 
+
+// 변수들의 집합을 하나의 자료형으로 표현 
+
+// 변수들을 여러가지 써야하는데, 해당 변수들의 집합을 사용한곳이 많거나, 
+
+// 변수 집합의 요소가 너무 많아, 묶어서 따로 분리해야 가독성과 관리가 편할거 같을때 사용. 
+
+// 구조체의 구조는 클래스에서 함수가 빠진것과 같다. 
+
+namespace UnityLesson_CSharp_Structure 
+
+{ 
+
+    class Program 
+
+    { 
+
+        static void Main(string[] args) 
+
+        { 
+
+            Warrior warrior = new Warrior(); 
+
+            warrior._stats._STR = 10; 
+
+            warrior._stats._DEX = 20; 
+
+            warrior._stats._CON = 30; 
+
+            warrior._stats._WIS = 40; 
+
+            warrior._stats._INT = 50; 
+
+            warrior._stats._REG = 60; 
+
+  
+
+            Warrior[] arr_Warrior = new Warrior[10]; 
+
+            // 구조체 변수를 생성하고 초기화 하는 방법 
+
+            Stats stats_Warrior = new Stats(); 
+
+            stats_Warrior._STR = 100; 
+
+            stats_Warrior._DEX = 200; 
+
+            stats_Warrior._CON = 300; 
+
+            stats_Warrior._WIS = 400; 
+
+            stats_Warrior._INT = 500; 
+
+            stats_Warrior._REG = 600; 
+
+  
+
+            int length = arr_Warrior.Length; 
+
+            for (int i = 0; i < length; i++) 
+
+            { 
+
+                arr_Warrior[i] = new Warrior(); 
+
+                arr_Warrior[i]._stats = stats_Warrior; 
+
+            } 
+
+  
+
+            for (int i = 0; i < length; i++) 
+
+            { 
+
+                arr_Warrior[i].SetStats(100,200,300,400,500,600); 
+
+            } 
+
+        } 
+
+    } 
+
+ 
+
+//==============================Warrior.cs================================// 
+
+using System; 
+
+using System.Collections.Generic; 
+
+using System.Text; 
+
+  
+
+namespace UnityLesson_CSharp_Structure 
+
+{ 
+
+    class Warrior 
+
+    { 
+
+        public Stats _stats; 
+
+  
+
+        public void SetStats(int STR, int DEX, int CON, int WIS, int INT, int REG) 
+
+        { 
+
+            _stats._STR = STR; 
+
+            _stats._DEX = DEX; 
+
+            _stats._CON = CON; 
+
+            _stats._WIS = WIS; 
+
+            _stats._INT = INT; 
+
+            _stats._REG = REG; 
+
+        } 
+
+    }     
+
+} 
+
+ 
+
+//=============================Stats.cs====================================// 
+
+namespace UnityLesson_CSharp_Structure 
+
+{ 
+
+    struct Stats 
+
+    { 
+
+        public int _STR; // strength 
+
+        public int _DEX; // dexterity 
+
+        public int _CON; // constitution 
+
+        public int _WIS; // wisdom 
+
+        public int _INT; // intelligence 
+
+        public int _REG; // registance 
+
+    } 
+
+} 
+
+//=============================Equipment.cs=================================// 
+
+namespace UnityLesson_CSharp_Structure 
+
+{ 
+
+    struct Stats 
+
+    { 
+
+        public int _STR; // strength 
+
+        public int _DEX; // dexterity 
+
+        public int _CON; // constitution 
+
+        public int _WIS; // wisdom 
+
+        public int _INT; // intelligence 
+
+        public int _REG; // registance 
+
+    } 
+
+} 
+
+ 
+
+//=============================EquipmentAbility.cs===========================// 
+
+namespace UnityLesson_CSharp_Structure 
+
+{ 
+
+    struct EquipmentAbility 
+
+    { 
+
+        public int _ATK; 
+
+        public int _DEF; 
+
+        public int _HP; 
+
+        public int _MP; 
+
+        public int _Durability; 
+
+    } 
+
+} 
+
+ 
+생성자 소멸자 가비지
+using System; 
+
+  
+
+namespace UnityLesson_CSharp_ClassDetails 
+
+{ 
+
+    class Program 
+
+    { 
+
+        static void Main(string[] args) 
+
+        { 
+
+            AA aa = new AA(); 
+
+            // new AA() 로 만들어진 객체는 힙에 할당  
+
+            // new AA() 로 만들어진 객체를 가리키는 참조값인 aa 는 스택에 할당 
+
+            // 이때 aa 를 GC Root (Garbage Collector Root) 라고 함 
+
+  
+
+            // CLR 이 루트 목록을 하나씩 전부 체크하면서 순회함.  
+
+            // 이때 CLR 의 요소인 GC( Garbage Collector) 는 해당 루트가 어떤 힙영역의 객체를 참조하는지 체크 
+
+            // 루트가 참조하는 힙영역이 비어있으면 Garbage 라고 판단하고 힙영역의 해당 객체를 삭제함.         
+
+        } 
+
+    } 
+
+  
+
+    class AA 
+
+    { 
+
+        public AA() // 생성자 
+
+        { 
+
+  
+
+        } 
+
+  
+
+        ~AA() // 소멸자 
+
+        { 
+
+  
+
+        } 
+
+        // 소멸자를 C# 에서 쓰지 않는 이유는 
+
+        // 생성자를 통해 AA 객체를 생성하고 함수가 종료되면 가비지컬렉터가 알아서 소멸자를 호출하기때문. 
+
+    } 
+
+} 
+
+메모리번지 
+나으 
+메모리 번지 
+영역 
+데이터 
+영역 
+영역 
+영역 
+내가 작성하 코드가 컴파일되어 
+기계어로 번역된 코드 
+Program의 
+저 拿 벼 수 
+Warrior의 
+저 拿 벼 수 
+Warrior 객 제 
+지역변수 
+죠- 소 7 卜 
+매개변수 
+지역 변수 (warrior 인스 턴스) 
+죠- 소 7 卜 
+매개변수 
+口파일 
+class P!℃gram 
+static b001 doS1ash, 
+static void main(){ 
+Warrior warrior 
+new Warrior( ) ; 
+if(do 
+1•』 rior 51a드h()• 
+cl 
+Warrior 
+public int HP, 
+public void Slash(){}; 
+ 
+
+CLR (Common Language Runtime ) , 공통 언어 런타임 
+관리실함환경 이라고도 하며, .NET Framework 의 구성요소이다- 개발자의 프로그램이 동작할[[H 객제지향형 클래스를 공유할 수 있도록 해준다 
+GC ( Garbage Collector ) 
+CLR 의 요소중 하나이고 메모리에서 불필요한 쓰레기를 삭제하는 기능을 한다. NET 환경의 어플리케이션을 실함하면 JIT 컴파일러 (프로그램을 기 
+계어로 번역해주는 컴파일러)는 GC Root 의 목록을 생성함-(GC Root는 힙 영역을 참조하는 스택 영역의 주소) 
+CLR 이 GC Root 목록을 순회할때 GC 는 GC Root 들이 참조하고있는 힙 영역의 객제가 유효한지 검사하다 유효하지 않다면 삭제하고 빈 공간은 그 
+다음 힙객제를 당겨서 메모리가 조각나지 않게 한다- 
+GC 검사 횟수에 [다라 힙 영역의 객제들에 세대 별로 구분을 짓는다 
+0 세대 - GC 가 아직 검토하지 않은 객제 
+1 세대 - GC 가 검토했으나 아직 삭제되지 않은 객체 
+2 세대 : GC 가 2번 이상 검토했으나 아직 삭졔되지 않은 객체 
+새대;』 1세대 - 
+A,B,C,D,E,F,G 객체가 생성되어 힙에 할당됨 
+C 
+0 
+E 
+F 
+G 
+A,B,E 는 실 행했으나 아직 참조되고있어 삭제되지 않고 새로운 H,I,J,K,L 객제가생성되어 힙에 할당됨 
+A 
+E 
+H 
+K 
+L 
+A,B,H,I는GC 실행했으나 아직 참조되고있어 삭제되지 않고 새로운 M,N,O,P 객체가 생성되어 힙에 할당됨 
+H 
+M 
+N 
+0 
+P 
+2세대 힙 영역이 객제로 가득찼을[대 Full GC 라고 하고 CLR 은 해당 어 
+리게이션을 일시 중지하고 모든 세대에 다시 GC 를 실행한다 
+ 

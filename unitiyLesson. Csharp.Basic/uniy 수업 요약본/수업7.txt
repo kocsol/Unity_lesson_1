@@ -1,0 +1,492 @@
+ForLoop Example
+using System; 
+
+// Orc 객체를 10명 만들고, 오크들의 인스턴스는 Orc타입 배열에 넣어준다. 
+
+// 각 오크의 이름은 오크0, 오크1, ....오크9  
+
+// 각 오크에게 랜덤한 isResting 값을 설정해준다 (true or false) 
+
+// 각 오크가 쉬고있으면 점프시키고 쉬지않고있으면 아무것도 안시킨다. 
+
+namespace UnityLesson_CSharp_ForLoopExample 
+
+{ 
+
+    class Program 
+
+    { 
+
+        static void Main(string[] args) 
+
+        { 
+
+            Orc[] arr_Orc = new Orc[10]; 
+
+            int length = arr_Orc.Length; 
+
+            for (int i = 0; 
+
+                i < length; 
+
+                i++) 
+
+            { 
+
+                arr_Orc[i] = new Orc(); 
+
+                arr_Orc[i].name = $"오크{i}"; 
+
+                arr_Orc[i].isResting = GetRandomBool(); 
+
+            } 
+
+            for (int i = 0; i < length; i++) 
+
+            { 
+
+                if (arr_Orc[i].isResting) 
+
+                { 
+
+                    arr_Orc[i].Jump(); 
+
+                } 
+
+            } 
+
+                         
+
+        } 
+
+  
+
+        static public bool GetRandomBool() 
+
+        { 
+
+            Random rand = new Random(); 
+
+            int randInt = rand.Next(0, 2); 
+
+            bool value = Convert.ToBoolean(randInt); // Next 함수는 minValue ~ maxValue - 1 범위 값을 반환. 0,2 를 넣으면 0또는 1 반환. 
+
+            return value; 
+
+        } 
+
+    } 
+
+  
+
+    class Orc 
+
+    { 
+
+        public string name; 
+
+        public float height; 
+
+        public float weight; 
+
+        public int age; 
+
+        public char genderChar; 
+
+        public bool isResting; 
+
+        public void Smash() 
+
+        { 
+
+            string message = $"{name} (이)가 휘둘렀다!"; 
+
+            Console.WriteLine(message); 
+
+        } 
+
+        public void Jump() 
+
+        { 
+
+  
+
+            Console.WriteLine($"{name} (이)가 점프했다!"); 
+
+  
+
+        } 
+
+  
+
+  
+
+  
+
+    } 
+
+  
+
+} 
+
+ 
+디버깅
+디버깅이란 : 
+
+ 
+
+프로그램이 오작동하는 요소, 잘못된 코드부분 등을 버그라고하고  
+
+이 버그를 찾아내고 고치는 작업 
+
+ 
+
+F5 를 눌러 실행하는것은 단지 프로그램을 실행하는것이 아니라,  
+
+개발자가 디버깅을 하기위한 모드로서 실행하는것.  
+
+ 
+
+버그가 의심되는부분에 중단점 (F9) 를 지정하고 한단계씩(F10) 눌러서 코드를 실행해보면,  
+
+코드가 실행되는 순서도 정확하게 볼 수 있으며, 버그를 잡아내기 편하다. 
+
+ 
+
+그리고 평소 코드 작성도 이 디버깅 을 하기 편하도록 작성하도록 해야하는데,  
+
+ 
+
+이전에 했던 For Loop 예제를 보면 
+
+ 
+
+arr_Orc.Length 를 직접 조건에 삽입 하는 방법 
+
+            for (int i = 0; i < arr_Orc.Length; i++) 
+
+            { 
+
+                ~~~                 
+
+            } 
+
+ 
+
+arr_Orc.Length 를 따로 매개변수에 할당해서 매개변수를 조건에 삽입하는 방법 
+
+     int length = arr_Orc.Length;       
+
+            for (int i = 0; i < length; i++) 
+
+            { 
+
+                ~~~                 
+
+            } 
+
+ 
+
+위 두가지 방법 중에 2번을 택하고 있는데, 그 이유가 디버그 할 때 중단점을 명확하게 표시하기 편하게 하기 위함이다.  
+
+코드는 한 줄씩 실행되므로 연산이나 변화가 일어나는 부분에서 매개변수를 자주 활용해서  
+
+줄단위로 세분화해주는것이 중요하다.  
+
+ 
+
+또다른 예시는 WriteLine 으로 복잡한 문자열을 출력할때 이다.  
+
+ 
+
+public void Smash()  
+
+{ 
+
+    Console.WriteLine($"{name} (이)가 휘둘렀다!"); 
+
+} 
+
+ 
+
+public void Smash() 
+
+{ 
+
+     string tmpString = $"{name} (이)가 휘둘렀다!"; 
+
+     Console.WriteLine(tmpString); 
+
+} 
+
+ 
+
+똑같은 이유로, WriteLine 함수에 문제가있는지, 아니면 WriteLine 에 인수로 넣어준  
+
+$"{name} (이)가 휘둘렀다!" 라는 부분에 문제가 있는지 확인하고 싶어서 디버깅을한다고하면,  
+
+중단점을 찍어도 명확한 결과를 얻지 못하거나 가독성이 매우 떨어질 수 있다.  
+
+따라서 이렇게 함수에 입력을 넣어주는 경우, 입력값이 연산을거쳐야 한다면  
+
+연산 오류와 함수 오류 둘 다 디버깅을 해야할 가능성이 있으므로  
+
+입력값을 연산한결과를 매개변수에 넣어주고, 매개변수를 함수 입력으로 쓰는 방식으로 코드를 작성하는것이 좋다. 
+
+ 
+collection
+using System; 
+
+using System.Collections.Generic; // generic collections 을 쓰기위해 필요한 namespace 
+
+// Collection 
+
+// 동적 배열 이라고도함  
+
+// Array 와 다르게 크기를 정해놓지않고 
+
+// Collection 단어 뜻대로 수집하듯이 
+
+// 아이템들을 추가하거나 뺄수 있으며, 그에따라 데이터가 유동적으로 변한다. 
+
+namespace UnityLesson_CSharp_Collection 
+
+{ 
+
+    class Program 
+
+    { 
+
+        static void Main(string[] args) 
+
+        { 
+
+            //=============================================== 
+
+            // List 
+
+            //=============================================== 
+
+            List<int> _list = new List<int>(); 
+
+            _list.Add(3); 
+
+            _list.Add(2); 
+
+            _list.Add(1); 
+
+            _list.Add(0); 
+
+            _list.Add(3); 
+
+  
+
+            // remove 
+
+            // 0 번째 인덱스부터 탐색하고, 첫번째로 인자와 같은 요소를 발견하면 삭제. 
+
+            // 삭제 성공시 true 반환, 인자와 같은 요소를 찾지 못하면 false 를 반환. 
+
+            _list.Remove(3); 
+
+  
+
+            int length = _list.Count; 
+
+            for (int i = 0; i < length; i++) 
+
+            { 
+
+                int tmpNumber = _list[i]; 
+
+                Console.WriteLine(tmpNumber); 
+
+            } 
+
+  
+
+            // foreach 는 collection 이 가지고있는 타입의 아이템 만큼 반복문을 실행하면서 각 아이템을 반환한다. 
+
+            foreach (int num in _list) 
+
+            { 
+
+                Console.WriteLine(num); 
+
+                // foreach 가 처음 돌때는 num 에 _list[0] 반환  
+
+                // 두번째 돌때는 num 에 _list[1] 반환 ... 
+
+            } 
+
+  
+
+            //============================================== 
+
+            // Dictionary 
+
+            //============================================== 
+
+            Dictionary<string, string> _dic = new Dictionary<string, string>(); 
+
+            _dic.Add("검사", "양손대검을 사용하여 물리공격을 하는 클래스"); 
+
+            _dic.Add("마법사", "지팡이를 사용하여 마법공격을 하는 클래스"); 
+
+            _dic.Add("수호자", "창과 방패를 사용하여 물리공격 및 방어 위주의 클래스"); 
+
+  
+
+            //_dic.Remove("검사"); 
+
+            bool isSwordMaster = _dic.ContainsKey("검사"); 
+
+            if (isSwordMaster) 
+
+            { 
+
+                string tmpValue = _dic["검사"]; 
+
+                Console.WriteLine($"검사 : {tmpValue}"); 
+
+            } 
+
+            else 
+
+            { 
+
+                Console.WriteLine("검사를 찾을 수 없습니다"); 
+
+            } 
+
+  
+
+            // Dictionary 도 foreach 구문이 가능하다. 
+
+            // dictionary 도 collection 이고 
+
+            // dictionary 의 key 도 collection 이고 
+
+            // dictionary 의 value 도 collection 이다. 
+
+            // 즉, 위 세가지 모두 foreach 구문이가능하다. 
+
+            foreach (string sub in _dic.Keys) 
+
+            { 
+
+                string tmpValue = _dic[sub]; 
+
+                Console.WriteLine($"{sub} : {tmpValue}"); 
+
+            } 
+
+            foreach (string sub in _dic.Values) 
+
+            { 
+
+                Console.WriteLine(sub); 
+
+            } 
+
+            foreach (KeyValuePair<string,string> sub in _dic) 
+
+            { 
+
+                string tmpKey = sub.Key; 
+
+                string tmpValue = sub.Value; 
+
+                Console.WriteLine($"{tmpKey}:{tmpValue}"); 
+
+            } 
+
+            // 위 세가지 경우가 있지만,   
+
+            // dictionary 는 단어 뜻대로 사전 처럼 사용하기 위한 collection 이다.  
+
+            // 우리가 사전을 찾을때 ,   
+
+            // 단어를 먼저 찾고 거기에 따라 단어의 뜻을 찾는다.   
+
+            // dictionary 에서 key 는 단어, value 는 단어의 뜻과 같은 역할이다.  
+
+            // 따라서 foreach 문을 사용해서 접근할때도,  
+
+            // dictionary 의 key 로 반복문을 통해 접근하는 경우가 대부분이지,   
+
+            // value 나 dictionary 자체로 접근하는 경우는 잘 없다.   
+
+            // 마치 '사과' 라는 단어를 검색하면 '사과나무에서 열리는 열매' 라는 뜻을 찾는것이지 
+
+            // '사과나무에서 열리는 열매' 를 검색해서 '사과'를 찾거나  
+
+            // '사과 : 사과나무에서 열리는 열매' 자체를 검색하지 않는것과 같다고 생각하면 된다.   
+
+  
+
+  
+
+            //============================================================== 
+
+            //Queue ( List 와 비슷하나 FIFO (First Input First Output) 
+
+            //============================================================== 
+
+            Queue<int> _queue = new Queue<int>(); 
+
+  
+
+            _queue.Enqueue(10); 
+
+            _queue.Enqueue(20); 
+
+            _queue.Enqueue(30); 
+
+  
+
+            Console.WriteLine(_queue.Peek()); // 가장 첫번째에 있는 값을 리턴 
+
+            Console.WriteLine(_queue.Dequeue()); // 가장 첫번째에 있는 값을 Queue에서 빼고 리턴 
+
+            Console.WriteLine(_queue.Dequeue()); 
+
+            Console.WriteLine(_queue.Dequeue()); 
+
+  
+
+            //============================================================== 
+
+            //Stack ( List 와 비슷하나 LIFO (Last Input First Output) 
+
+            //============================================================== 
+
+            Stack<int> _stack = new Stack<int>(); 
+
+  
+
+            _stack.Push(10); 
+
+            _stack.Push(20); 
+
+            _stack.Push(30); 
+
+  
+
+            Console.WriteLine(_stack.Peek()); // 가장 마지막에 있는 값을 리턴 
+
+            Console.WriteLine(_stack.Pop()); // 가장 마지막에 있는 값을 Stack 에서 빼고 리턴 
+
+            Console.WriteLine(_stack.Pop()); 
+
+            Console.WriteLine(_stack.Pop()); 
+
+  
+
+        } 
+
+    } 
+
+} 
+
+ 
