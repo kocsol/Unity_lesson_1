@@ -1,0 +1,65 @@
+2022/01/17 unity 수업
+목차
+변수
+함수
+Jump!
+UI/UX
+
+
+변수
+1. 선언 int a; 
+2. 정의 a = 10;
+3. 사용 . 선언 해놓고 안쓰면 공간낭비
+
+함수
+함수의 형식
+int ABC(){
+}
+
+void Vodi(){
+}
+1. 선언 - 위의 형식으로 작성하는 것이 함수의 선언이이다.  
+2. 정의 - 괄호안에 기능을 넣어줌
+3. 사용 - 사용을 함으로서 update 내에 필요한 줄이 줄어듬 즉 함수를 사용함으로서 코드를 더 간편, 보기 쉽게 
+사용가능하다.
+
+void Awake    -  start 이전에 사용하는 함수
+void LateUpdate - update 가 끝나면 실행하는 함수 해당내용을 update가 끝나고 하나의 프레임을 끝내야한다.
+
+Jump!
+
+만약에 (if)왼쪽 컨프롤 키를 누르면 (Input.GetKeyDown)
+		(LeftControl)
+이 스크립트가 들어가 있는 게임 오브젝트의 물리적인 작용을 아랭테서 위로 힘을 가한다.
+뭐뭐 해 set 뭐뭐 가져와 get
+GetComponent<Rigidbody> 게임 오브젝트의 리지드바디 component 를 가져와
+ if (Input.GetKeyDown(KeyCode.LeftControl))
+        {
+            this.gameObject.GetComponent<Rigidbody>().AddForce(this.gameObject.transform.up * 300); // 나의 기준으로 누워서 up은 y축이 아님
+            this.gameObject.GetComponent<Rigidbody>().AddForce(Vector3.up * 300);   // 절대방향 이건 무조건 y축
+ vector transform 버전에 따라서 서로 바꿔서 되는 경우가 있음.
+Translate 사용해서 점프만들어도 되지만 이건 물리적인 작용을 받지 않는 것이기에 약간 야메의 느낌이다.
+
+UI/UX
+UI user interface 누르면 서버에서 반응해서 컴퓨터 모니터에 나오고
+UX user experience 유저들을 편하게 사용자 친화 예를 들면 fps 움직임 wasd 로 이루어진것과 같이
+
+UI CANVAS
+캔버스 내에 모든 걸
+캔버스는 움직일 수 없음. why 게임창의 크기와 같음. 게임화면의 크기가 바뀌면 캔버스도 바뀜
+CANVAS - Rendormode Screen overlay
+screen space -camera 카메랄 넣어야함. 그 카메라의 시야로
+world space 움직일 수 있음. - vr은 무조건 이거 사용해야함
+이 3가지만 알면 된다!!!
+1. image
+이미지가 sprite형식으로 돼 있으니 그걸로 바꿔줘야함.  그걸 sprite에 넣어줘라
+2. text
+horizontoal verical overflow 다 overflow로 
+font size는 안깨지지만 scale은 꺠지니까 왠만하면 font size로 글 사이즈를 맞춰라
+3. button
+2D는 3D랑 달라! transform이 아니라 RECT transform
+
+자주 엎어지니까 z축을 바꾸려해서
+  //this.gameObject.transform.Rotate(0, 0, rotateSpeed * Time.deltaTime);
+했지만 물리적 요인으로 인해서 잘 진행되지 않았음
+this.gameObject.transform.rotation = Quaternion.Euler(0, 0, 0); 이게 position과 같은 rotation의 느낌

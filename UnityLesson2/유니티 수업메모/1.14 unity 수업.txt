@@ -1,0 +1,122 @@
+2022/01/14 Unity
+window - rendering -lightning 으로 화면 밝기 아래 auto는 체크하지말고 generate 만 
+목차
+강사님 개인정보
+함수들을 활용하여 게임객체들을 움직여보자
+-this.gameObject.transform.position = new Vector3(좌표);
+-if문과 getkey 함수
+-position,Translate
+-gameObject 이동시키기!
+-변수활용과 public 변수
+-
+
+
+
+
+강사님 email 및 전화번호
+vkdlxjghtxn2@naver.com
+010-9951-8276
+
+유니티 C#이랑 다르게 출력함수로 print 사용
+
+ctrrl shift c 유니티에서 콘솔창 출력키
+
+
+gameObject 즉 cube의  start할 때의 위치를 설정하는 스크립트 
+우리는 해당 스크립트 Player을 Asset에서 만들었고 그것을 object인 Cube에 넣어주었기에 해당 스크립에 담긴 내용이 Cube에 적용돼 움직인다.
+ public class Player : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void Start()    // 맨 처음 시작
+    {
+        this.gameObject.transform.position = new Vector3(0, 1, 0); // 이스크립의 게임오브젝트의 transform 위치를 해당위치로 설정한다.
+    }
+
+    // Update is called once per frame
+    void Update()   
+    {
+        print("Update");
+    }
+}
+
+position은 순간이동의 느낌익 Translate()은 이동의 느낌인데 position은 변수라 딱 정하는거지만 Translate()은 함수이기때문에 실행이니까 움직이는 느낌!
+
+만약에 위쪽 방향키를 누른다면 이 스크립트가 들어가 있는 게임 오브젝트를 0,5,0으로 이동하라
+ void Update()
+    {
+        
+        if (Input.GetKeyDown(KeyCode.UpArrow))   //getkeydown 눌렀을때 getkeyup 손에서 땠을때 누르고 있을떄는 getkey가 계속 작동
+        {
+            this.gameObject.transform.position = new Vector3(0, 5, 0);
+
+        }
+     }
+
+만약에 위쪽 방향키를 누르고 있으면 계속 이동하라 x좌표 1씩 1프레임마다 게속 이동
+void Update()
+    {
+        
+        if (Input.GetKey(KeyCode.UpArrow))   //getkeydown 눌렀을때 getkeyup 손에서 땠을때 누르고 있을떄는 getkey가 계속 작동
+        {
+            this.gameObject.transform.Translate(1, 0, 0);     //위치를 변환시킬때 
+
+        }
+     }
+그런데 이런 경우 컴퓨터의 성능에 따라 차이가 생길 수 있어 절대시간사용하는 함수 사용
+ this.gameObject.transform.Translate(1 * Time.deltaTime, 0, 0);     //위치를 변환시킬때  1초마다 이동.
+
+이걸 활용하여 앞뒤좌우 움직이는 코드를 만들 수 있다.
+    void Update()
+    {
+        
+        if (Input.GetKey(KeyCode.UpArrow))   
+        {
+            this.gameObject.transform.Translate( 0, 0, 1 * Time.deltaTime);     
+
+        }
+        if (Input.GetKey(KeyCode.DownArrow))
+        {
+            this.gameObject.transform.Translate(0, 0, -1 * Time.deltaTime);
+
+        }
+
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            this.gameObject.transform.Translate(-1 * Time.deltaTime,0, 0 );
+
+        }
+
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            this.gameObject.transform.Translate(1 * Time.deltaTime,0, 0);
+
+        }
+
+---> 그런데 너무 늦어 그러면 앞에 있는 숫자를 1에서 다른 숫자로 바꿔주면 된다.
+그런데 이건 너무 귀찮고 매번 하나하나 바꾸기 귀찮으니까 
+해당 속도를 변수로 설정해주면 편하다.
+int moveSpeed;    숫자를 해당 변수로 바꿔주기! 그리고 moveSpeed 값을 정해주면 해당 속도로 움직인다.
+그리고 moveSpeed를 public 변수로 설정해두면  inspector에 moveSpeed 설정이 나타난다. 훨씬 편한게 설정가능 
+스크립트에서 계속 바꾸는게 아니라 편하게 할 수 있음!!
+그런데 unity에서 바꿔도 스크립트에는 안바꿔있음.
+
+만약에 왼쪽방향키를 누르고 있다면 이 스크립트가 들어있는 게임오브젝트를 왼쪽으로 회전시켜라
+x,y,z 중에 y를 움직여야 좌우로 움직이는 것처럼 보임 
+Rotate 함수는 Translate와 다르게 숫자는 1초에 움직이는 각을 나타낸다.
+
+public int rotateSpeed = 90;
+
+  if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            this.gameObject.transform.Rotate(0,-rotateSpeed * Time.deltaTime, 0 );
+
+        }
+
+
+맵 만들기 
+plane 사용 그런데 plane은 y축 scale 건들지 말자! 안보이는데 자리차지해! 버그 유발~!
+
+그런데 카메라가 안움직이니 재미없으니까 카메라를 움직여보자
+how?
+스크립트를 넣어서? 너무 귀찮
+hierachy는 계층구조 Play에 넣어줘!
