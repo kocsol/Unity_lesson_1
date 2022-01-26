@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class Player : MonoBehaviour
     int a;
     public GameObject bullet; // 유니티에서 수정 할 수 있게 public 으로 그래서 prefab을 bullet에 넣어주면 됨
     int health;
+    
     // Start is called before the first frame update
     void Start()
     {

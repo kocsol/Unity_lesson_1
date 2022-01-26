@@ -20,9 +20,9 @@ if (input.GetKeyDown(KeyCode.LeftShift)){
 
 prefab - 게임오브젝트를 계속 만들어놓을 수 없으니 이걸 사용해서 자동생성
 gameobject를  Asset에 넣기 그러면 이건 주사위모양으로 보임
-그리고 gameobject에 있는걸 삭제하고 다시 aseet에 있는걸 다시 옮기면 됨
+그리고 gameobject에 있는걸 삭제하고 다시 asset에 있는걸 다시 옮기면 됨
 이걸 Scene에서 설정을 해주고 override해서 Asset에 있는 거로 해주면 좋다.
-그리고 player에 prefab한것을 집언 넣을때 hierachy에 있는 것이 아닌 Asset에 있는 것을 넣어주면 좋다.
+그리고 player에 prefab한것을 집언 넣을때 hierachy에 있는 것이 아닌 Asset에 있는 것을 넣어주된다.
 
 총알을 총구에 생성한다.
 1. 총알이라는 게임오브젝트를 만든다.

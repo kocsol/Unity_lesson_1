@@ -1,0 +1,80 @@
+2022/01/26 유니티 수업
+
+file build settings 에서 내가 만들프로그램을 어떤식으로 만들지 정할 수 있음.
+즉 어떤 게임환경에서 사용할지 정함.
+
+
+오늘의 할것
+데미지를 입었을 때 빨간색 바가 피가 다는 수업
+enemy위에 hp바 다는법
+hp바에 text 넣는법.
+-text도 child화 해주고 객체의 scale을 작게하고 글자를 크게 해서 안깨지게
+-using UnityEngine.UI
+-HP Text안에 있는 내용을 바꿀 수 있게 선언해주기
+-hp.text 사용해서 text 값 바꿔주기
+-hp bar backgroud 만들기
+-적군 리스폰해보기
+
+
+
+빨간색 바 만들기 --> UI 사용해서 이미지를 넣어주기
+enemy위에 빨간색 띄우기--> canvas의 sceen space overay-양쪽눈에 렌즈, screen space camera-한쪽눈으로만 보는 즉 오른쪽에서 보이는 왼쪽에서 안 보이는 느낌
+world space- vr에서 많이 사용하는 
+
+enemy위에 hp바 올리기
+
+하여튼 캔버스해서 이미지 만들어서  enemy 위에 올려놨는데 
+같이 움직여야해! 그런데 how? child 화 enemy안에 넣어주고 하면되는데
+그런데? 정확히 손으로 옮길수 있을까? 엄청난 시간이 소요된다.
+--->자식이 갖는 tranform값은 부모까지의 거리를 나타낸다. 그때 나오는 값을 local을 붙여서 부름.
+그러니 거리의 값이 0이면 같은 위치 transform reset 하면 좋음.
+
+hp바 텍스트 넣기
+
+
+1. 내 현재 체력을 hp라는 text에 옮긴다.
+int health            
+Text 콤퍼넌트를 변수화 해서 옮기면 되는데 text를 쳤더니 unityEngine namespace에 없어서 안나옴 그래서
+다른 namespace를 가져와야함 --> using UnityEngine.UI
+그래서 선언! public Text hpText로 하면 enemy 콤퍼넌트에 HpText가 생김 여기에 Hierarchy에 있는
+HP Text를 넣어줘서 우리가 HPText안에 있는 내용을 바꿀 수 있도록 해줘야한다!
+
+hpText변수를 사용해서 값을 바꿔주려면 hpText.text hpText의 전체가 아니라 text콤퍼넌트니 이렇게 하고  내용을 넣어주면 된다.
+
+2.hp바. BackGround 두개 제작
+image 두개면 아래에 있는게 더 앞에 있음.
+assets-create-sprites-square
+해서 만든걸 Hpbar sprites에 넣어주고 그걸 image type filled로 
+filled method로 어떤식으로 이미지가 변환할지 우리는 Hp바를 만드니 horizontal 즉 수평적 움직임으로
+
+3.hp바(image)는 체력(health)에 비례해서 줄어든다.
+0~100
+fillamount는 0~1
+enemy에 hpbar 변수화해서 hpbar 이미지를 넣어주고 
+float myHp = (float)(object.o1f * health); 
+hpBar.fillAmount = myHp;
+해서 fillamout수치를 바꿔서 hp바를 줄일 수 있다.
+다양한 수학관련 식은 mathf 를 사용해보자.
+
+적군을 리스폰해보자 
+적군이 죽어서 사라지면 새로운 적군 하나 더 만들(생성해)어주세요.
+적군이 죽어서 --> 만약에 적군이 죽는다면 --> 만약의 적(Enemy)의 
+if (health < 0)
+{
+	instantiate( 적군 );
+}
+
+그런데 문제가 있네 --> 유니티 상의 버그가 있음.
+그래서
+create empty --->EnemyManger로 이름변경하고 거기에 스크립트 넣어줌
+그래서 
+적군이 죽어서 사라지면 새로운 적군 하나 더 만들(생성해)어주세요. 
++ 그 새로운 적군을 기존의 적군으로 만들어주세요
+if (enemy의 health < 0){
+instantiate(enemyPrefab);
+}
+
+자세한 내용은 01.28에 계속
+
+
+
