@@ -1,0 +1,158 @@
+2022/01/28 유니티 수업
+
+TestPro1로 옮겨감
+--적죽으면 리스폰 시키기
+저번 수업과 이번 수업 비교하기
+최적화를 위환 불렛의 최적화
+적군한테 총알이 맞으면 총알 사라지게 하기
+trycatch
+점프를 땅에 닿아쓸때만
+
+
+전 수업에 썼던 것은 
+적군이 죽으면 새로운 적군을 하나 생성해주세요
+
+if)enemy가 갖고 있는 health <= 0)
+{
+새로운 적군을 하나 생성해 주세요
+}
+
+이번 수업에서는
+
+if (현재 enemy라는 게임오브젝트의 숫자가 0이라면)
+{
+새로운 적군을 하나 생성해주세요
+enemy라는 게임오브젝트의 숫자는 1입니다.
+}
+----> 이걸 코딩으로 하면
+int enemynum; //현재  enemy라는 게임 오브젝트 숫자의 선언
+enemyNum=0;
+if(enemyNum == 0)
+{
+	enemy = Instantiate(enemyPrefab);
+	enemyNum = 1;
+}
+그리고 enemyNum이 enemy가 죽으면 0이 되어야 하니까 그거에 해당하는 코드를 enemy에 만들어줌
+그런데 enemy랑 enemyManager랑 클래스가 다른데 어떡하지?
+
+public EnemyManager _enemyManager;
+-->가져와서 변수화
+  그래서 코드에 이렇게 사용함
+            _enemyManager.enemyNum = 0;
+그런데 이렇게 하면 Unity에서 enemyManger에 매번 enemyManger를 계속 넣어줘야함.
+하지만 그렇게 하기엔  너무 비효율적이니까
+ enemy start에
+
+_enemyManager = FindObjectOfType<EnemyManager>();
+--->이걸 써줘서 자동적으로 넣어주자
+FindObjectOfType<EnemyManager> --> 이게 object를 찾도록 도와주는 코드! 어떤걸? <>안에 있는걸
+*s가 붙어 FindObjects는 List Array에 사용
+
+총알을 쐈는데 이게 계속 날아가면 컴퓨터에 부하가 심함 
+이걸 그래서 없에고 싶어서
+총알이 5초뒤에 사라지게 해주세요
+총알 = this.gameObject
+5초 = Time
+사라지게 해주세요 = destroy();
+5초가 지나면 총알이 사라지게 해주세요
+만약 현재 시작한 후부터 5초가 지났다면 이 스크립트가 들어가 있는 게임오브젝트를 Destroy()해라
+
+절대시간은 Time.deltaTime
+float interval; //시간에 대한 변수
+interval = 0;
+interver =  interver + Time.deltaTime
+
+짧게 쓰면 interver +=Time.deltaTime
+if(interval > 5)             // 5초가 지났다면
+{
+Destroy(this.gameObject);
+}
+
+적군이 총알이 맞았을 때 없에기
+불렛이라는 태그가 달린것이 적군에게 맞은거라면 총알을 없에라 
+  private void OnTriggerEnter(Collider other)
+    {
+	if(other.gameObject.tag == "Bullet")
+        {            
+   
+            Destroy(other.gameObject);
+        }
+
+
+try catch
+시스템 내용
+
+try
+{
+ 내용내용내용
+}
+
+catch(Exception)
+{
+Debug.log(e);
+}
+내용내요내욘 하다가 오류가 생길경우 그중의 오류를 잡아내라!
+
+점프를 할때 땅에 닿아 있을 때만 해라!
+이 스크립트가 들어가 있는 게임오브젝트가 땅에 닿았을때만 점프가 가능하게 한다.
+통과면 쭉 떨어지니까 총돌했을때!
+
+조건문
+if (이 스크립트가 들어가 있는 게임오브젝트가 땅에 닿았을때만)
+{
+	점프가 가능하게 한다.
+}
+콜라이더
+tag (땅이라고 인지) plane에 그라운드 태그를 붙여줌
+점프 스크립트  기존에 만든것 존재
+-->
+********주의할 것
+privat void OnCollsionEnter(Collision collision{
+하고 안에 if 문 넣어주고 하면
+안됨!
+}
+이건 닿는 한 프레임 그순간에만 가능 하다는 뜻임 그러안됨!
+
+----> 올바른 코드는
+false에서 true인 상태로 바뀔때 점프가 가능하다!
+조건문
+만약 땅에 닿았을때 bool 변수(isGround)를 false에서 true로 변화시킨다.
+
+if(isGround == true){
+
+점프한다. 스크립트 넣어주고
+isGround = false            //점프하면 떠있으니 false 상태가 되어야함
+}
+변수로 초기에 bool isGround를 만들고
+그 후 
+ private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "Ground")
+        {
+            isGround = true;
+        }
+로 ground 값을 만들어주고
+
+if (isGround == true)
+        {
+            if (Input.GetKeyDown(KeyCode.LeftControl))
+            {
+                this.gameObject.GetComponent<Rigidbody>().AddForce(this.gameObject.transform.up * 300);
+                //this.gameObject.GetComponent<Rigidbody>().AddForce(Vector3.up * 300); 자세한 내용은 메모장에서
+            }
+        }
+
+이렇게 해서 완성이다.
+
+
+
+
+
+
+
+
+
+
+
+
+
