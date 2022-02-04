@@ -275,6 +275,8 @@ MonoBehaviour:
   hpText: {fileID: 1490753390730383863}
   hpBar: {fileID: 1490753389156162143}
   enemy: {fileID: 1490753389717971718}
+  bullet: {fileID: 2817639932431122610, guid: 9e146db11f0c9d64fa6fda77c1ef3ec5, type: 3}
+  _enemyManager: {fileID: 0}
 --- !u!1 &1490753390330228673
 GameObject:
   m_ObjectHideFlags: 0

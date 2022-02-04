@@ -1,0 +1,118 @@
+2022/02/04 유니티 수업
+
+
+이번 시간에 할것!
+1. 2P 슈팅게임 제작!
+- 1P는 기존 플레이어, 2P는 적
+
+제작과정
+-Enemy 조작.(플레이어의 조작처럼 Enemy또한 조작으로 움직일 수 있게 제작,WASD)
+
+-Enemy가 총을 쏘는 기능(기존 플레이어의 Shoot키를 우측 shift로 수정, Enemy의 Shoot키는 좌측 Shift)
+
+-Player에도 체력을 넣는다
+
+-카메라도 탑뷰(위에서 보는 시점)으로 변경
+
+-승리와 패배 표시.
+
+
+*******Enemy 조작.(플레이어의 조작처럼 Enemy또한 조작으로 움직일 수 있게 제작,WASD)************
+Enemy 움직이기
+1. 키를 입력 받는다.
+-Update 함수내에 키 입력받는 코드를 제작.
+2. 입력받은 키를 구분한다.
+3. 구분한 키에 따라 Enemy를 이동/ 회전 시킨다.
+-플레이어를 만들어 줄 때처럼 하면 rotateSpeed 변수를 하나 만들어 주자
+ if (Input.GetKey(KeyCode.W))
+        {
+            this.gameObject.transform.Translate(0, 0, 10*Time.deltaTime); 
+                //스크립트가 속해 있는 게임오브젝트에 접근하여 그 게임오브젝트를 이동(전진)시킨다.
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            this.gameObject.transform.Translate(0, 0, -10 * Time.deltaTime);
+            //스크립트가 속해 있는 게임오브젝트에 접근하여 그 게임오브젝트를 이동(후)시킨다.
+        }
+        if (Input.GetKey(KeyCode.A))
+        {
+            this.gameObject.transform.Rotate(0, -rotateSpeed * Time.deltaTime, 0);
+                //스크립트가 속해 있는 게임오브젝트에 접근하여 그 게임오브젝트를 좌회전시킨다.
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            this.gameObject.transform.transform.Rotate(0, rotateSpeed * Time.deltaTime, 0);
+            //스크립트가 속해 있는 게임오브젝트에 접근하여 그 게임오브젝트를 우회전시킨다.
+        }
+
+**-Enemy가 총을 쏘는 기능(기존 플레이어의 Shoot키를 우측 shift로 수정, Enemy의 Shoot키는 좌측 Shift)********
+Player스크립트에서 RightShift로 바꿔줌
+그리고 적의 총알과 Player의 총알을 나눠줘야함.
+
+ public GameObject bullet; //총알선언
+
+ if (Input.GetKeyDown(KeyCode.LeftShift))//총을 쐈다.
+        {
+            //총을 쏴서 총알이 나가는 스크립트
+            //1.총알이 생긴다. 
+            //2. 총알의 위치를 발사하는 Enemy의 중심부로 놓는다.
+            //3. Enemy가 보는 방향으로 총알을 돌린다. bullet 스크립트에 이미 넣어줬기때문에
+
+            GameObject bulletClone = Instantiate(bullet);
+
+            bulletClone.transform.position = this.gameObject.transform.position;
+            
+            bulletClone.AddComponent<Rigidbody>();
+            Rigidbody bulletRigidBody = bulletClone.GetComponent<Rigidbody>();
+            bulletClone.transform.forward = this.gameObject.transform.forward;
+            bulletRigidBody.useGravity = false;
+        }
+
+
+
+
+******Player에도 체력을 넣는다***************
+Player 스크립트 내에 
+1. 체력을 관린하는 변수
+2. 적의 총알을 맞았는걸 관리하는 코드
+3. 체력이 0보다 작아져서 사라지는걸 관린하는 코드
+
+  private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "EnemyBullet")
+        {
+            //총을 맞았다.
+            //1. 체력이 닳았다. damage를 변수화 해준다. Enemy에서 해준것처럼
+            health = health - damage;
+
+            //2. 체력이 0보다 작아지면 죽는다.
+            CheckHealth();
+	//3. 총알에 부딪히면 총알이 사라진다.
+	Destroy(other.gameObject);
+        }
+
+  void CheckHealth()
+    {
+        if (health <0)
+        {
+            //죽는다.
+            Destroy(this.gameObject);
+        }
+    }
+
+Hp바 넣는건 전 수업시간에 한대로 하면 된다. 약간의 이름만 바꿔서 넣어주면 된다.
+그리고 플레이어 스크립트에 관련 변수들 선언해주기
+
+void HpUI()
+    {
+        hpText.text = "HP : " + health;
+        hpBarImage.fillAmount = (float)health / (float)maxHp;
+    }
+이렇게 함수를 만들어주고 이걸 update에 넣어줘서 실행되게 한다.
+
+****************-카메라도 탑뷰(위에서 보는 시점)으로 변경****************
+그냥 카메라를 위에서 보는 시점으로 바꿔주면 된다.
+
+
+
+

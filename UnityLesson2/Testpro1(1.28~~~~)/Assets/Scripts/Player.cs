@@ -10,16 +10,23 @@ public class Player : MonoBehaviour
     bool isActive;
     private int a;
 
+
     public GameObject bullet;
     private GameObject test;
     public GameObject intBullet2;
     bool isGround;
+
     int health;
+    int damage = 30;
+    public Text hpText;
+    public Image hpBarImage;
+    int maxHp = 100;
     
     // Start is called before the first frame update
     void Start()
     {
         health = 100;
+        maxHp = 100;
     }
 
     // Update is called once per frame
@@ -27,7 +34,7 @@ public class Player : MonoBehaviour
     {     
         Move();
 
-        if (Input.GetKeyDown(KeyCode.LeftShift))//방아쇠를 당긴다.
+        if (Input.GetKeyDown(KeyCode.RightShift))//방아쇠를 당긴다.
         {
             //총알을 발사한다.
 
@@ -44,6 +51,14 @@ public class Player : MonoBehaviour
             Rigidbody rb = insBullet.AddComponent<Rigidbody>();
             rb.useGravity = false;
         }
+
+        HpUI();
+    }
+
+    void HpUI()
+    {
+        hpText.text = "HP : " + health;
+        hpBarImage.fillAmount = (float)health / (float)maxHp;
     }
 
     private void Move()
@@ -95,7 +110,22 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Obstacle")
+        if (other.gameObject.tag == "EnemyBullet")
+        {
+            //총을 맞았다.
+            //1. 체력이 닳았다. damage를 변수화 해준다. Enemy에서 해준것처럼
+            health = health - damage;
+
+            //2. 체력이 0보다 작아지면 죽는다.
+            CheckHealth();
+            //부딪히면 총알 사라짐
+            Destroy(other.gameObject);
+        }
+
+
+
+
+        if (other.gameObject.tag == "Obstacle")
         {
             print("장애물과 부딪힘");
         }
@@ -104,5 +134,20 @@ public class Player : MonoBehaviour
         {
             print("적과 부딪힘");
         }
+
+        
+
+
     }
+    void CheckHealth()
+    {
+        if (health <0)
+        {
+            //죽는다.
+            Destroy(this.gameObject);
+        }
+    }
+
+
+
 }
