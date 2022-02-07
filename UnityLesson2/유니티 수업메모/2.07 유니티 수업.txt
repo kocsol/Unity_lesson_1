@@ -1,0 +1,74 @@
+2022/02/07 유니티 수업
+
+꿀팁 모음
+함수 찾기 힘들때 
+-> 해당 함수 누르고 F12 누르면 된다.
+
+오늘 수업
+Enemy가 1명이냐 다수냐에 따른 게임 방식의 차이
+-->1p 2p를 사용해서 카메라에 대한 수업
+1P = Player 2P = Enemy
+1. 1P카메라는 1P만 따라가고 2P 카메라는 2P만 따라간다.
+
+2. 1P가 이기면 1P의 canvas(화면)에는 win이 뜨고 2P의 Canvas(화면)에 Lose가 뜬다.
+
+3. 2P가 이기면 2P의 Cnasvas(화면)에는 win이 뜨고 1P의 Canvas(화면)에 Lose가 뜬다.
+
+4. 1P가 죽으면 1P를 다시 생성하고, 2P가 죽으면 2P를 다시 생성한다.
+
+*****1. 1P카메라는 1P만 따라가고 2P 카메라는 2P만 따라간다.*******
+1P카메라는 1P의 child화 즉 하이러키화하면 된다.
+카메라 오브젝트의 
+clear flags - 스카이박스 하늘과 같이보고 싶다.
+	- 솔리드 컬러 하늘이 아닌 단일 색상 2D에서 많이 쓰임
+	- 뎁스온리 원하는 것들만 보이게 설정하는
+	- 돈클리어 잔상이 보임. 
+culling Mask - 내에 있는 Layer만 보임.  해당 설정 카메라에만 적용되는 // 존재는 한다.
+
+projection- perspective 점점 넓어지는 카메라
+	- authgraphic  그냥 딱 사각형 그거만
+
+FOV!! 가장 자주 쓴다. - 몰입감을 다르게 한다.
+
+clipping Planes - 카메라에서의 거리가 보이는 정도
+
+****새로운 게임 씬 만들어 주기 우클릭 사용***
+display 1~8까지 있음 즉 1~8까지 띄울 수 있음.
+그러니까 카메라 2개를 사용할 수 있다. 
+카메라의 Target Display를 원하는 거로 바꿔준다.
+현재 Scene에 enemy가 존재하지 않으니까 하나 prefab에서 데려오고
+그렇게 하면 새로운 카메라의 화면이 보인다. 이제 이 카메라를 Enemy에 넣어준다.
+그리고 enemy에 계속 카메라가 넣어져 있어야 함으로 override를 해서 prefab에도 적용되게 해주자
+그 후 enemy의 위치가 지금처럼 마주보고 있게 나타나게 하기 위해서 
+위치값을 enemyManager 코드에 써주자
+
+
+******2. 1P가 이기면 1P의 canvas(화면)에는 win이 뜨고 2P의 Canvas(화면)에 Lose가 뜬다.*******
+이제 PLAYER도 죽어도 다시 살아나야 하니까 ENEMY MANAGER를 바꿔주자
+enemy manager를 game player로 이름을 바꾸고 해당 enemy 내용을 player도 만들어 준다.
+그 후 스크립트 이름과 클래스 이름도 바꿔주자
+그리고 enemy에서 쓰인 enemy manager도 GameManager로 바꿔주자
+그리고 player도 죽었을때 숫자가 변하게 바꿔주자 
+
+---> 체력이 0이하로 낮아지면 상대방 화면에 win이 뜬다.
+----> GameManager에서 enemyNum 혹은 playerNum이 0이 되면 상대방 화면에 win이 뜬다.
+---> if(enemyNum == 0)
+{
+1P의 화면에 win이 뜬다. 
+}
+
+if (playerNum == 0)
+2P의 화면에 win이 뜬다.
+--------------> 이걸 gamemanager에 해당 내용을 적어준다.
+
+//1p화면에 win이 뜬다. -> 1p의 화면에 win이라느 ㄴText가 뜨게 한다.
+            //1p를 찾는다. -->1p안에 있는(child) 캔버스를 찾는다. -> 긍 안에 있는 Text를 찾아서 변수화하고 이름을 win으로 수정한다.
+            playerResultText = GameObject.Find("Player(Clone)/Canvas/ResultText").GetComponent<Text>() ;
+            playerResultText.text = "Win";
+
+            //2p화면에 lose가 뜬다. -> 2p의 화면에 lose라는 Text가 뜬다.
+            enemyResultText = GameObject.Find("Enemy(Clone)/Canvas/ResultText").GetComponent<Text>();
+            enemyResultText.text = "Lose";
+
+이렇게 하면 번거로울뿐만 아니라 이긴쪽은 clone이 없기 때문에 이름을 바꿔줘야한다. 그렇게 하기 전에 더 쉽게 돌아가는
+코드를 다음 수업에 뿌리겠다. 다음 수업부터 시작하는 유니티 프로젝트는 이 코드가 아닌 다른 코드가 적혀 있을테니 참고
