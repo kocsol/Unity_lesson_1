@@ -1,0 +1,121 @@
+2022/02/16 유니티 수업
+
+***유니티 팁
+새로운 씬을 만들자! assets scenes create
+3d object에서 quad는 잘 안씀 주로 plane 사용 영상을 사용할 때 quad사용
+
+오늘 할 것
+3d object terrain**
+window rendering light setting 에서 generate lighting 눌러주자
+-테라인과 플레인의 차이
+
+오디오!!
+-얻을 수 있는 좋은 사이트
+seob6285.tistory.com/212   저작권 없는 노래들 bgm 써도 돈 아내도 된다!
+
+오디오 스크립트 만들기
+
+비디오!
+
+스카이 박스
+
+포인트 라이트
+
+
+--테라인과 플레인의 차이
+terrain은 맵 지형의 느낌! 여기에 꾸며서 맵을 만듬
+1테라인 = 100플래인 크기의 차이! 
+
+TERRAIN의 콤퍼논트에 눌러서 보면 영어로 나오는데 그거 잘 읽으면 무슨 기능인지 알 수 있음.
+
+set height로 올려놓고 raise lower 쓰면 lower로 내려가는 계곡 만들 수 있음.
+smooth height 뾰적한 산 같은걸 좀더 smooth 하게 만들어줌
+
+URP mobile에서 예쁜 맵
+HDRP pc에서 예쁜 맵
+
+위치는 바꿀 수 있지만 scale이랑 rotation은 변하지 않음!  
+
+
+****************
+오디오!! 
+Audio Source
+3D Sound setting . dopler level --> 가까울 수록 소리가 크게 들리게 하는 기능
+오디오 클립을 compress 하면 압축 음질 용량최적화에좋음
+
+
+*************************
+스크립트 만들기
+public AudioSource audio; // 선언
+유니티에 해당 변수에 BGM 을 넣어놓고 
+
+ void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            audio.Play(); // play함수는 AudioSource 내에 있는 함수 중 하나인데 오디오 클립을 재생할 수 있다.
+        }
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            audio.Pause();
+        }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            audio.Stop();
+        }
+        if (Input.GetKeyDown(KeyCode.F))
+        { audio.mute = !audio.mute;(아래에 있는 코드를 간단하게 하면 이렇게 쓸 수 있다.)
+            
+
+	if(audio.mute == false)
+            {
+                audio.mute = true;
+            }
+            if (audio.mute == true)
+            {
+                audio.mute = false;
+            }
+    
+
+*****************************
+비디오
+video player 콤포넌트 사용는데 이때 raw iamge나 plane 사용
+plane 만들어서 거기에 동영상 드래그해서 넣으면 됨
+
+스크립트에선 
+using UnityEngine.Video;
+
+네임스페이스 만들어주고 video에 plane 넣어준다.
+
+ public VideoPlayer video
+
+if (Input.GetKeyDown(KeyCode.A))
+        {
+           video.Play(); // play함수는 AudioSource 내에 있는 함수 중 하나인데 오디오 클립을 재생할 수 있다.
+        }
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            video.Pause();
+        }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            video.Stop();
+        }
+        if (Input.GetKeyDown(KeyCode.F))
+
+           
+
+비디오 넣을 때  source에 video Clip대신 URL 사용 가능 그러나 유튜브는 못넣음.
+즉 내 컴퓨터 내에 있는 경로를 적을 수 있다.
+
+***********************
+스카이박스를 다운받고 window rendering lgith setting 하고 skybox material 에 넣으면 
+적용이 된다.
+
+*******************
+포인트 라이트는 
+해당 라이트를 기준으로 빛을 쏘는데 설정에 따라서 쏘는 방식이 바뀐다.
+그리고 
+Directional 라이트는 위치가 변하지 않는다. 각도만 바뀜!
+Area 는 사각형으로 특정부분 
+주로 캐릭터의 얼굴에 쏴서 보이게 한다.
