@@ -1,0 +1,167 @@
+2022/02/18 유니티 수업
+
+해당 라운드 전에 함정 패턴을 알려주고 탈출 할 수 있게 일정 패터을 주고 미세하게 약간만 바꿔줌으로서
+난이도를 높게 하는 게임 
+
+테트리스 느낌으로 아래에 출구가 있는데 한줄이 꽉차야 해당 줄에 있는 박스가 사라진다. 랜덤으로 하나가 사라짐
+
+오늘 할 것은 새로운 파일에서 유니티 코딩 테스트
+
+유니티 알고리즘에 대해서 
+Unity Documentation '매뉴얼'을 통해서 알고리즘을 알자
+
+코딩
+if문 
+배열 , 리스트
+
+코루틴 co routine
+
+**********************************
+유니티 
+1. 에디터
+-asset bundle 자주 사용함 
+그런데 그러면 object의 콤포넌트로 사용못하고 따로 폴더를 만들어줘야함
+using UnityEditor'
+
+
+
+************************************
+initializing
+
+Debug.log 는 system사용 print는 Unity사용
+
+Awake는 start랑 다르게 스크립트를 꺼놓아도 작동한다.
+
+onEnable은 해당 object를 켜져 있을때 작동하고 
+
+ondiable은 꺼져있을때 작동한다.
+
+onDestroy는 
+
+***************************
+physics 
+
+ontrigger 등등
+Update - 이건 컴퓨터의 프레임마다 다르기에 절대적인 기준을 넣어주는 것과 같이 사용하는게 좋다.
+
+
+**************************
+input events
+-OnMouse
+조건이 일어났을때 이러이러한 것을 사용한다.
+
+public class Player : MonoBehaviour 이 모노비헤이비어 자리에 써준다.
+
+**********************
+GameLogic
+-한 프레임마다 
+update
+
+*****************
+scene rendering - 안티얼라이징 쉐이딩 등을 사용하는 지금은 그렇게 중요하지 않다.
+
+*****************
+Gizmo rendering 
+유니티에서 오른쪽 위에 있는 x,y,z 뜨는 화살표들 qwert 눌렀을 때 나오는 UI
+
+********************
+GUI rendering 
+2D할때 제대로 한다.
+
+***********
+End of frame
+
+*********
+pausing 
+
+onApplication pause ex)유니티 재생버튼 옆에 있는 정지 할 때 
+중간에 esc눌러서 멈춘다던지 잠깐 바탕화면 나갈때라던지
+-자주 사용할 거다.
+**************************
+Disable/enable
+
+
+
+*****************
+Decommisioning
+
+onAllicationQuit()
+어떤 버튼을 눌렀을때 나가는 ex) 닫기 창
+그렇기때문에 빌드를 해서 컴퓨터, 핸드폰 용으로 만들어서 누르면 나가는 걸 보여주자
+그러면 이걸 왜써?
+나갈때 이제 기존의 작업을 저장시키고 필요없는 것들 꺼주는걸 한번에 해주기 위해서
+
+OnDestroy
+파괴될떄
+
+
+*********************************
+클러스팅 빅데이터에서 많이 쓰이는데 이러이러이러저조건을 경우 이거 적용
+
+코딩
+
+if 문
+배열-변수의 집단 객체 (Array, List)
+보기에는 비슷하고 기능도 비슷해보이지만
+배열과 리스트는 전혀 달라
+
+---배열 
+
+public GameObject[] alphabet;
+이러면 alphabet변수가 나오고 각 gameobject를 넣을 수 있다.
+
+for (int i = 0; i < 5; i++)
+        {
+            alphabet[i].transform.position = Vector3.zero;
+        }	
+그 후 반복문을 쓰면 배열에 속해 있는 gameobject들의 위치가 이렇게 적용된다.
+
+public으로 배열을 만들면 공간 unity에서 만들어 줘서 넣어야한다.
+private의 경우 코드로 따로 만들어줘야한다.
+private MeshRender [] test = new MeshRender[] 이런 식으로 만든다.
+
+--리스트
+public List<GameObject>  alphabet;
+가장 큰 차이점은  배열은 공간이 딱딱 정해져 있기 때문에 수정이나 위치의 변형이 어렵지만
+리스트의 경우엔 더 자유럽다. 그리고 add함수를 통해 계속 늘릴수 있다.
+
+************************
+co routine 코루틴
+WaitForSeconds가 가장 자주 쓰이고 web에서 
+
+메인 알고리즘이고 코루틴은 다른 루틴으로 알고리즘이 돌고 있다. 
+yield return null; // yield return을 써줘야 빨간줄이 안나온다.
+        yield return new WaitForEndOfFrame();
+        yield return new WaitForSeconds(3);
+        yield return new WaitForFixedUpdate();
+yield return 이후에 무엇이와도 이경우에는 실행을 한다. 
+왜냐하면  이건 다른 루틴으로 이용하니까 
+
+********************************
+
+눈(camera) 앞에 있는 (camera의 forward)가 비추고 있다. 큐브를 클릭해서 제거해라 (Destroy)
+1.큐브 클릭해서 지우기
+ if (Input.GetMouseButtonDown(0))  //0,1,2중 왼,오,휠 //ray xray생각 카메라에서 나가는 빛
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition); //ray를 쏠거야 마우스가 클릭한 위치에
+            RaycastHit hitInfo;  // 레이가 부딪힌곳
+            if(Physics.Raycast(ray,out hitInfo,Mathf.Infinity))
+            {
+                Destroy(hitInfo.Collider.gameObject);
+            }
+        }
+
+2. sphere 클릭했는데 안사라지기
+if (Input.GetMouseButtonDown(0))  //0,1,2중 왼,오,휠 //ray xray생각 카메라에서 나가는 빛
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition); //ray를 쏠거야 마우스가 클릭한 위치에
+            RaycastHit hitInfo;  // 레이가 부딪힌곳
+            if(Physics.Raycast(ray,out hitInfo,Mathf.Infinity))
+            {
+                if(hitInfo.collider.tag == "Finish")
+                {
+                    Destroy(hitInfo.collider.gameObject);
+                }
+            }
+        }
+
