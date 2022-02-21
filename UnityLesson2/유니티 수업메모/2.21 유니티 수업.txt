@@ -1,0 +1,111 @@
+2.21 유니티 수업
+
+프로젝트의 기본 구조
+
+Scene 이동과 빌드
+
+프로젝트의 기본 구조
+
+
+개발팀
+-기획
+  회의 -> 회의록 -> 기획안-> 레퍼런스  -> 일정을 만든다. ->역기획 다른 기획들과 비교
+-->ux -->회의 --> ㅇ회의록 --> 기획-->개발자 디자인에게
+-개발
+  -클라이언트  고객에게 보이는 부분
+  -서버
+-디자인                      디자인 개발 아는 사람을 TA tech artist
+  - 2d                     
+   -3d
+	-prop 백그라운드
+	-character
+	-ani
+
+
+시작										완성
+	MVP
+	prototype		alpha test	beta test		G
+
+
+
+Scene 이동과 빌드
+조건 내가 만약 현재 FirstScene에 있다면
+5개의 큐브가 있는데,  ---> 5개 큐브 만들어주기
+5개의 큐브가 모두 사라진다면, --->
+cubeNum 선언 해주고
+if (Input.GetMouseButtonDown(0))  //0,1,2중 왼,오,휠 //ray xray생각 카메라에서 나가는 빛
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition); //ray를 쏠거야 마우스가 클릭한 위치에
+            RaycastHit hitInfo;  // 레이가 부딪힌곳
+            if (Physics.Raycast(ray, out hitInfo, Mathf.Infinity))
+            {
+                if (hitInfo.collider.tag == "Finish")
+                {
+                    Destroy(hitInfo.collider.gameObject);
+                    cubeNum++; // 큐브가 사라질때마다 일씩 늘어나게 해주기
+                }
+
+다음(Second Scene) Scene으로 넘어간다. SceneManager.LoadScene(Second Scene);
+
+using UnityEngine.SceneManagement; namespace 해주고
+}
+        if (cubeNum == 5)
+        {
+            SceneManager.LoadScene("SecondScene");   //괄호안은 들어갈 부분 들어갈 씬은 미리 빌드를 해주어야한다. ctrl shift b내에 
+        }					// SecondScene이 빌드내에 1로 표현되기에 1을 써도 되긴한다.
+
+BGM은 게속 유지한다.
+
+Don'tDestroyOnLoad --> Scene을 이동해도 사라지지 않는 것
+  DontDestroyOnLoad(this.gameObject); start 에 써주기
+
+ctrl shift b -> player settings 아이콘 만들고 등등 어플 켰을때  unity logo 뜨는지 안뜨는지 
+other settings 는 다이해를 할 수 있어야한다.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+A
+	최소한의 기능을 
+	할 수 있는
+
+-------------------------------------------------------------------------------------------------------------

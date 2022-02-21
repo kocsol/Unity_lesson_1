@@ -1,20 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
-    
-    // Start is called before the first frame update
 
+    // Start is called before the first frame update
+    int cubeNum; //선언
+    int sceneNum;
+    
     void Start()
     {
-        
+        cubeNum = 0;
+        print(cubeNum);
+        GameObject tt = GameObject.Find("Test1");
+        if (tt != this.gameObject)
+        {
+            Destroy(GameObject.Find("Test1"));
+        }
+        DontDestroyOnLoad(this.gameObject);
 	}
 
-	// Update is called once per frame
-	
-	void Update()
+    private void OnEnable()
+    {
+        print(cubeNum);
+    }
+    // Update is called once per frame
+
+    void Update()
 
     {
         if (Input.GetMouseButtonDown(0))  //0,1,2중 왼,오,휠 //ray xray생각 카메라에서 나가는 빛
@@ -23,10 +37,33 @@ public class Player : MonoBehaviour
             RaycastHit hitInfo;  // 레이가 부딪힌곳
             if (Physics.Raycast(ray, out hitInfo, Mathf.Infinity))
             {
-                Destroy(hitInfo.collider.gameObject);
+                if (hitInfo.collider.tag == "Finish")
+                {
+                    Destroy(hitInfo.collider.gameObject);
+                    cubeNum++; // 큐브가 사라질때마다 일씩 늘어나게 해주기
+                }
             }
-        
+        }
+        if (cubeNum == 5)
+        {
+            if (sceneNum ==0)
+            {
+                SceneManager.LoadScene(1);
+                sceneNum = 1;
+                cubeNum = 0;
+            }
+            else if (sceneNum == 1)
+            {
+
+                SceneManager.LoadScene(0);   
+                sceneNum = 0;
+                cubeNum = 0;
+            }
+            
+            
+        }
+
+
 
     }
-   
 }
